@@ -5,13 +5,15 @@
 }
 
 <h2>Hizmetler</h2>
-
+<a class="btn btn-danger" href="/Hizmet/Create">Hİzmet Ekle</a>
 <table class="table table-striped"> 
     <thead>
         <tr>
+            <th>#</th>
             <th>Başlık</th>
             <th>Açıklama</th>
             <th>ResimURL</th>
+            <th>İşlemler</th>
         </tr>
     </thead>
 
@@ -22,8 +24,9 @@
             <tr>
                 <td>@item.HizmetId</td>
                 <td>@item.Baslik</td>
-                <td>@item.Aciklama</td>
-                <td><img @item.ResimURL/> </td>
+                <td>@Html.Raw(item.Aciklama)</td>
+                <td><img width="100" height="100" @item.ResimURL /> </td>
+                <td><a href="/Hizmet/Edit/@item.HizmetId">Düzenle</a> | <a href="/Hizmet/Delete/@item.HizmetId">Sil</a></td>
             </tr>
         }
     </tbody>

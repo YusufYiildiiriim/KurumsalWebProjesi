@@ -1,0 +1,55 @@
+﻿
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Yeni Oluştur</h2>
+
+<div class="form-horizontal">
+    @*<form action="/Blog/Create" method="post">*@
+
+    @using (Html.BeginForm("Create","Blog",FormMethod.Post,new {enctype="multipart/form-data ,"}))
+     {
+        @Html.AntiForgeryToken();
+        <h4>Iletisim</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            <label for="cname" class="control-label col-lg-2"> Başlık<span class="required"></span></label>
+            <div class="col-md-10">
+                <input class="form-control" id="Baslik" type="text" name="Baslik" required />
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="cname" class="control-label col-lg-2"> Kategori<span class="required"></span></label>
+            <div class="col-md-10">
+                @Html.DropDownList("KategoriId", null, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="cname" class="control-label col-lg-2"> içerik <span class="required"></span></label>
+            <div class="col-md-10">
+                <textarea class="form-control" name="Icerik"> </textarea>
+            </div>
+            <div class="form-group">
+                <label for="cname" class="control-label col-lg-2"> ResimURL<span class="required"></span></label>
+                <div class="col-md-10">
+                    <input class="form-control" type="file" name="ResimURL" required accept=".jgp,.png,.jpeg" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-offset-2 col-lg-10">
+                    <button class="btn btn-primary">Ekle</button>
+                    <button class="btn btn-light"><a href="/Blog/Index">İptal</a></button>
+                </div>
+            </div>
+
+        </div>
+     }
+
+
+    @*</form>*@
+
+</div>
+
