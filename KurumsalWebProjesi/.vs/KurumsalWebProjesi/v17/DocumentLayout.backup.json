@@ -3,16 +3,36 @@
   "WorkspaceRootPath": "C:\\Users\\bahta\\Documents\\Bireysel Geli\u015Ftirilenler\\Web Projesi\\KurumsalWebProjesi\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6F1A62E8-02CE-449A-86CD-B5E333C7C41D}|KurumsalWebProjesi\\KurumsalWebProjesi.csproj|c:\\users\\bahta\\documents\\bireysel geli\u015Ftirilenler\\web projesi\\kurumsalwebprojesi\\kurumsalwebprojesi\\views\\blog\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{6F1A62E8-02CE-449A-86CD-B5E333C7C41D}|KurumsalWebProjesi\\KurumsalWebProjesi.csproj|solutionrelative:kurumsalwebprojesi\\views\\blog\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{6F1A62E8-02CE-449A-86CD-B5E333C7C41D}|KurumsalWebProjesi\\KurumsalWebProjesi.csproj|c:\\users\\bahta\\documents\\bireysel geli\u015Ftirilenler\\web projesi\\kurumsalwebprojesi\\kurumsalwebprojesi\\controllers\\sliderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F1A62E8-02CE-449A-86CD-B5E333C7C41D}|KurumsalWebProjesi\\KurumsalWebProjesi.csproj|solutionrelative:kurumsalwebprojesi\\controllers\\sliderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6F1A62E8-02CE-449A-86CD-B5E333C7C41D}|KurumsalWebProjesi\\KurumsalWebProjesi.csproj|C:\\Users\\bahta\\Documents\\Bireysel Geli\u015Ftirilenler\\Web Projesi\\KurumsalWebProjesi\\kurumsalwebprojesi\\controllers\\blogcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6F1A62E8-02CE-449A-86CD-B5E333C7C41D}|KurumsalWebProjesi\\KurumsalWebProjesi.csproj|c:\\users\\bahta\\documents\\bireysel geli\u015Ftirilenler\\web projesi\\kurumsalwebprojesi\\kurumsalwebprojesi\\views\\sliders\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6F1A62E8-02CE-449A-86CD-B5E333C7C41D}|KurumsalWebProjesi\\KurumsalWebProjesi.csproj|solutionrelative:kurumsalwebprojesi\\views\\sliders\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F1A62E8-02CE-449A-86CD-B5E333C7C41D}|KurumsalWebProjesi\\KurumsalWebProjesi.csproj|c:\\users\\bahta\\documents\\bireysel geli\u015Ftirilenler\\web projesi\\kurumsalwebprojesi\\kurumsalwebprojesi\\views\\sliders\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6F1A62E8-02CE-449A-86CD-B5E333C7C41D}|KurumsalWebProjesi\\KurumsalWebProjesi.csproj|solutionrelative:kurumsalwebprojesi\\views\\sliders\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F1A62E8-02CE-449A-86CD-B5E333C7C41D}|KurumsalWebProjesi\\KurumsalWebProjesi.csproj|c:\\users\\bahta\\documents\\bireysel geli\u015Ftirilenler\\web projesi\\kurumsalwebprojesi\\kurumsalwebprojesi\\controllers\\blogcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6F1A62E8-02CE-449A-86CD-B5E333C7C41D}|KurumsalWebProjesi\\KurumsalWebProjesi.csproj|solutionrelative:kurumsalwebprojesi\\controllers\\blogcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6F1A62E8-02CE-449A-86CD-B5E333C7C41D}|KurumsalWebProjesi\\KurumsalWebProjesi.csproj|C:\\Users\\bahta\\Documents\\Bireysel Geli\u015Ftirilenler\\Web Projesi\\KurumsalWebProjesi\\kurumsalwebprojesi\\views\\blog\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{6F1A62E8-02CE-449A-86CD-B5E333C7C41D}|KurumsalWebProjesi\\KurumsalWebProjesi.csproj|solutionrelative:kurumsalwebprojesi\\views\\blog\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{6F1A62E8-02CE-449A-86CD-B5E333C7C41D}|KurumsalWebProjesi\\KurumsalWebProjesi.csproj|c:\\users\\bahta\\documents\\bireysel geli\u015Ftirilenler\\web projesi\\kurumsalwebprojesi\\kurumsalwebprojesi\\views\\sliders\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6F1A62E8-02CE-449A-86CD-B5E333C7C41D}|KurumsalWebProjesi\\KurumsalWebProjesi.csproj|solutionrelative:kurumsalwebprojesi\\views\\sliders\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F1A62E8-02CE-449A-86CD-B5E333C7C41D}|KurumsalWebProjesi\\KurumsalWebProjesi.csproj|c:\\users\\bahta\\documents\\bireysel geli\u015Ftirilenler\\web projesi\\kurumsalwebprojesi\\kurumsalwebprojesi\\views\\sliders\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6F1A62E8-02CE-449A-86CD-B5E333C7C41D}|KurumsalWebProjesi\\KurumsalWebProjesi.csproj|solutionrelative:kurumsalwebprojesi\\views\\sliders\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F1A62E8-02CE-449A-86CD-B5E333C7C41D}|KurumsalWebProjesi\\KurumsalWebProjesi.csproj|c:\\users\\bahta\\documents\\bireysel geli\u015Ftirilenler\\web projesi\\kurumsalwebprojesi\\kurumsalwebprojesi\\views\\sliders\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6F1A62E8-02CE-449A-86CD-B5E333C7C41D}|KurumsalWebProjesi\\KurumsalWebProjesi.csproj|solutionrelative:kurumsalwebprojesi\\views\\sliders\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F1A62E8-02CE-449A-86CD-B5E333C7C41D}|KurumsalWebProjesi\\KurumsalWebProjesi.csproj|c:\\users\\bahta\\documents\\bireysel geli\u015Ftirilenler\\web projesi\\kurumsalwebprojesi\\kurumsalwebprojesi\\views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6F1A62E8-02CE-449A-86CD-B5E333C7C41D}|KurumsalWebProjesi\\KurumsalWebProjesi.csproj|solutionrelative:kurumsalwebprojesi\\views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,8 +42,22 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\bahta\\Documents\\Bireysel Geli\u015Ftirilenler\\Web Projesi\\KurumsalWebProjesi\\KurumsalWebProjesi\\Views\\Sliders\\Edit.cshtml",
+              "RelativeDocumentMoniker": "KurumsalWebProjesi\\Views\\Sliders\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\bahta\\Documents\\Bireysel Geli\u015Ftirilenler\\Web Projesi\\KurumsalWebProjesi\\KurumsalWebProjesi\\Views\\Sliders\\Edit.cshtml",
+              "RelativeToolTip": "KurumsalWebProjesi\\Views\\Sliders\\Edit.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-31T09:18:00.587Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
@@ -31,41 +65,97 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "C:\\Users\\bahta\\Documents\\Bireysel Geli\u015Ftirilenler\\Web Projesi\\KurumsalWebProjesi\\KurumsalWebProjesi\\Views\\Blog\\Edit.cshtml",
-              "RelativeDocumentMoniker": "KurumsalWebProjesi\\Views\\Blog\\Edit.cshtml",
-              "ToolTip": "C:\\Users\\bahta\\Documents\\Bireysel Geli\u015Ftirilenler\\Web Projesi\\KurumsalWebProjesi\\KurumsalWebProjesi\\Views\\Blog\\Edit.cshtml",
-              "RelativeToolTip": "KurumsalWebProjesi\\Views\\Blog\\Edit.cshtml",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABoAAABXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-29T14:10:37.641Z",
+              "Title": "SlidersController.cs",
+              "DocumentMoniker": "C:\\Users\\bahta\\Documents\\Bireysel Geli\u015Ftirilenler\\Web Projesi\\KurumsalWebProjesi\\KurumsalWebProjesi\\Controllers\\SlidersController.cs",
+              "RelativeDocumentMoniker": "KurumsalWebProjesi\\Controllers\\SlidersController.cs",
+              "ToolTip": "C:\\Users\\bahta\\Documents\\Bireysel Geli\u015Ftirilenler\\Web Projesi\\KurumsalWebProjesi\\KurumsalWebProjesi\\Controllers\\SlidersController.cs",
+              "RelativeToolTip": "KurumsalWebProjesi\\Controllers\\SlidersController.cs",
+              "ViewState": "AgIAAIgAAAAAAAAAAAAAwJoAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-31T08:47:19.568Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "BlogController.cs",
               "DocumentMoniker": "C:\\Users\\bahta\\Documents\\Bireysel Geli\u015Ftirilenler\\Web Projesi\\KurumsalWebProjesi\\KurumsalWebProjesi\\Controllers\\BlogController.cs",
               "RelativeDocumentMoniker": "KurumsalWebProjesi\\Controllers\\BlogController.cs",
               "ToolTip": "C:\\Users\\bahta\\Documents\\Bireysel Geli\u015Ftirilenler\\Web Projesi\\KurumsalWebProjesi\\KurumsalWebProjesi\\Controllers\\BlogController.cs",
               "RelativeToolTip": "KurumsalWebProjesi\\Controllers\\BlogController.cs",
-              "ViewState": "AgIAAFEAAAAAAAAAAAAgwHQAAAAqAAAAAAAAAA==",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAowEgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-23T18:08:11.972Z",
+              "WhenOpened": "2025-03-31T08:48:03.524Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\bahta\\Documents\\Bireysel Geli\u015Ftirilenler\\Web Projesi\\KurumsalWebProjesi\\KurumsalWebProjesi\\Views\\Sliders\\Details.cshtml",
+              "RelativeDocumentMoniker": "KurumsalWebProjesi\\Views\\Sliders\\Details.cshtml",
+              "ToolTip": "C:\\Users\\bahta\\Documents\\Bireysel Geli\u015Ftirilenler\\Web Projesi\\KurumsalWebProjesi\\KurumsalWebProjesi\\Views\\Sliders\\Details.cshtml",
+              "RelativeToolTip": "KurumsalWebProjesi\\Views\\Sliders\\Details.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACkAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-31T09:17:25.034Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\Users\\bahta\\Documents\\Bireysel Geli\u015Ftirilenler\\Web Projesi\\KurumsalWebProjesi\\KurumsalWebProjesi\\Views\\Sliders\\Delete.cshtml",
+              "RelativeDocumentMoniker": "KurumsalWebProjesi\\Views\\Sliders\\Delete.cshtml",
+              "ToolTip": "C:\\Users\\bahta\\Documents\\Bireysel Geli\u015Ftirilenler\\Web Projesi\\KurumsalWebProjesi\\KurumsalWebProjesi\\Views\\Sliders\\Delete.cshtml",
+              "RelativeToolTip": "KurumsalWebProjesi\\Views\\Sliders\\Delete.cshtml",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAACwAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-31T09:16:55.982Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\bahta\\Documents\\Bireysel Geli\u015Ftirilenler\\Web Projesi\\KurumsalWebProjesi\\KurumsalWebProjesi\\Views\\Sliders\\Index.cshtml",
+              "RelativeDocumentMoniker": "KurumsalWebProjesi\\Views\\Sliders\\Index.cshtml",
+              "ToolTip": "C:\\Users\\bahta\\Documents\\Bireysel Geli\u015Ftirilenler\\Web Projesi\\KurumsalWebProjesi\\KurumsalWebProjesi\\Views\\Sliders\\Index.cshtml",
+              "RelativeToolTip": "KurumsalWebProjesi\\Views\\Sliders\\Index.cshtml",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAACEAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-31T08:56:04.656Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "_AdminLayout.cshtml",
+              "DocumentMoniker": "C:\\Users\\bahta\\Documents\\Bireysel Geli\u015Ftirilenler\\Web Projesi\\KurumsalWebProjesi\\KurumsalWebProjesi\\Views\\Shared\\_AdminLayout.cshtml",
+              "RelativeDocumentMoniker": "KurumsalWebProjesi\\Views\\Shared\\_AdminLayout.cshtml",
+              "ToolTip": "C:\\Users\\bahta\\Documents\\Bireysel Geli\u015Ftirilenler\\Web Projesi\\KurumsalWebProjesi\\KurumsalWebProjesi\\Views\\Shared\\_AdminLayout.cshtml",
+              "RelativeToolTip": "KurumsalWebProjesi\\Views\\Shared\\_AdminLayout.cshtml",
+              "ViewState": "AgIAAAMCAAAAAAAAAAAmwBQCAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-31T08:54:18.313Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\bahta\\Documents\\Bireysel Geli\u015Ftirilenler\\Web Projesi\\KurumsalWebProjesi\\KurumsalWebProjesi\\Views\\Blog\\Index.cshtml",
-              "RelativeDocumentMoniker": "KurumsalWebProjesi\\Views\\Blog\\Index.cshtml",
-              "ToolTip": "C:\\Users\\bahta\\Documents\\Bireysel Geli\u015Ftirilenler\\Web Projesi\\KurumsalWebProjesi\\KurumsalWebProjesi\\Views\\Blog\\Index.cshtml",
-              "RelativeToolTip": "KurumsalWebProjesi\\Views\\Blog\\Index.cshtml",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABgAAAAgAAAAAAAAAA==",
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\bahta\\Documents\\Bireysel Geli\u015Ftirilenler\\Web Projesi\\KurumsalWebProjesi\\KurumsalWebProjesi\\Views\\Sliders\\Create.cshtml",
+              "RelativeDocumentMoniker": "KurumsalWebProjesi\\Views\\Sliders\\Create.cshtml",
+              "ToolTip": "C:\\Users\\bahta\\Documents\\Bireysel Geli\u015Ftirilenler\\Web Projesi\\KurumsalWebProjesi\\KurumsalWebProjesi\\Views\\Sliders\\Create.cshtml",
+              "RelativeToolTip": "KurumsalWebProjesi\\Views\\Sliders\\Create.cshtml",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAACMAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-23T17:53:20.562Z",
+              "WhenOpened": "2025-03-31T08:49:25.092Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
             }
           ]
         }

@@ -1,0 +1,43 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Kurumsal Admin Panel Girişi</title>
+    <link href="Content/AdminLayout/bootstrap.min.css" rel="stylesheet">
+    <link href="Content/AdminLayout/bootstrap-icons.css" rel="stylesheet">
+    <link href="Content/AdminLayout/boxicons.min.css" rel="stylesheet">
+    <link href="Content/AdminLayout/quill.snow.css" rel="stylesheet">
+    <link href="Content/AdminLayout/quill.bubble.css" rel="stylesheet">
+    <link href="Content/AdminLayout/remixicon.css" rel="stylesheet">
+    <link href="Content/AdminLayout/style.css" rel="stylesheet">
+</head>
+<body>
+    <div>
+        <form class="login-form" content="/Admin/Login" method="post" novalidate>
+            <p class="alert alert-danger" >@ViewBag.Uyari</p>
+            <div class="col-12">
+                <label for="yourUsername" class="form-label">E-Posta</label>
+                <span class="input-group-text" id="inputGroupPrepend"></span>
+                <input type="text" name="Eposta" class="form-control" id="yourUsername" required>
+            </div>
+
+            <div class="col-12">
+                <label for="yourPassword" class="form-label">Password</label>
+                <input type="password" name="Sifre" class="form-control" id="yourPassword" required>
+            </div>
+
+           
+            <div class="col-12">
+                <button class="btn btn-primary w-100" type="submit">Giriş Yap</button>
+            </div>
+          
+        </form>
+    </div>
+</body>
+</html>
