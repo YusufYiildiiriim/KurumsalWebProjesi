@@ -1,0 +1,38 @@
+﻿@model IEnumerable<KurumsalWebProjesi.Models.Model.Slider>
+    @{ 
+        Layout = null;
+    }
+
+
+<div id="main-slider" class="flexslider">
+
+    @*@foreach (var item in Model)
+        {
+            <ul>
+
+                    <img src="~/@item.ResimURL" alt="@item.Baslik" />
+                    <div class="flex-caption">
+                        <h3>@item.Baslik</h3>
+                        <p>@item.Aciklama</p>
+                        <a href="#">Devamını Oku</a>
+                    </div>
+
+            </ul>
+        }*@
+    <table>
+        <tr>
+            @foreach (var item in Model)
+            {
+                <td>
+                    <img src="~/@item.ResimURL" alt="@item.Baslik" />
+                    <div>
+                        <h3>@item.Baslik</h3>
+                        <p>@item.Aciklama</p>
+                        <a href="#">Devamını Oku</a>
+                    </div>
+                </td>
+            }
+        </tr>
+    </table>
+
+</div>
