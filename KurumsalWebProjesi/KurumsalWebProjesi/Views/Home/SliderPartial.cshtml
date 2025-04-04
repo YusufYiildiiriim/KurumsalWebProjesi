@@ -1,38 +1,58 @@
 ﻿@model IEnumerable<KurumsalWebProjesi.Models.Model.Slider>
-    @{ 
-        Layout = null;
-    }
+@{
+    Layout = null;
+}
+
+<section id="hero" class="hero section dark-background">
+
+    <!-- <img src="assets/img/hero-bg.jpg" alt="" data-aos="fade-in"> -->
+
+    <div id="hero-carousel" class="carousel carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+
+       
+        <div class="container position-relative">
 
 
-<div id="main-slider" class="flexslider">
-
-    @*@foreach (var item in Model)
+            @*@foreach (var item in Model)
         {
-            <ul>
+            <div class="carousel-item active">
+                <div class="carousel-container">
+                    <h2>item.Baslik</h2>
+                    <p>item.Aciklama</p>
+                    <a href="#about" class="btn-get-started">Daha Fazlasını Oku</a>
+                </div>
+            </div>
 
-                    <img src="~/@item.ResimURL" alt="@item.Baslik" />
-                    <div class="flex-caption">
-                        <h3>@item.Baslik</h3>
-                        <p>@item.Aciklama</p>
-                        <a href="#">Devamını Oku</a>
-                    </div>
-
-            </ul>
         }*@
-    <table>
-        <tr>
+
             @foreach (var item in Model)
             {
-                <td>
-                    <img src="~/@item.ResimURL" alt="@item.Baslik" />
-                    <div>
-                        <h3>@item.Baslik</h3>
+                <div class="carousel-item @(item == Model.First() ? "active" : "")">
+                    <div class="carousel-container">
+                        <h2>@item.Baslik</h2>
                         <p>@item.Aciklama</p>
-                        <a href="#">Devamını Oku</a>
+                        <a href="#about" class="btn-get-started">Daha Fazlasını Oku</a>
                     </div>
-                </td>
+                </div><!-- End Carousel Item -->
             }
-        </tr>
-    </table>
 
-</div>
+
+            <a class="carousel-control-prev" href="#hero-carousel" role="button" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+            </a>
+
+            <a class="carousel-control-next" href="#hero-carousel" role="button" data-bs-slide="next">
+                <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+            </a>
+
+            <ol class="carousel-indicators"></ol>
+
+        </div>
+        
+
+
+
+
+    </div>
+
+</section><!-- /Hero Section -->

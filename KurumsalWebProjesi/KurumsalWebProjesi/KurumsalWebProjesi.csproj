@@ -1379,6 +1379,11 @@
     <Content Include="Views\Sliders\Edit.cshtml" />
     <Content Include="Views\Sliders\Index.cshtml" />
     <Content Include="Views\Home\SliderPartial.cshtml" />
+    <Content Include="Views\Home\Hakkimizda.cshtml" />
+    <Content Include="Views\Home\FooterPartial.cshtml" />
+    <Content Include="Views\Home\Hizmetlerimiz.cshtml" />
+    <Content Include="Views\Home\Iletisim.cshtml" />
+    <Content Include="Views\Home\Blog.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
