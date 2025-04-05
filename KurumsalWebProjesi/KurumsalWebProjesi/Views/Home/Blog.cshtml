@@ -10,48 +10,61 @@
 <!-- Page Title -->
 <div class="page-title dark-background">
     <div class="container position-relative">
-        <h1>Blog</h1>
-        <p>Blog Yazılarımıza Alt Sekmeden Ulaşabilirsiniz.</p>
-        <nav class="breadcrumbs">
-            <ol>
-                <li><a href="index.html">ana Menü</a></li>
-                <li class="current">Blog</li>
-            </ol>
+        @*<h1>Blog</h1>
+            <p>Blog Yazılarımıza Alt Sekmeden Ulaşabilirsiniz.</p>*@
+        <nav>
+            <ul>
+                @*<li><a href="index.html">Ana Menü</a></li>
+                    <li class="current">Blog</li>*@
+
+                <li>
+
+                    <h5>Blog Kategorilerimiz</h5>
+                    @{
+                        Html.RenderAction("BlogKategoriPartial", "Home");
+                    }
+                </li>
+            </ul>
         </nav>
     </div>
 </div><!-- End Page Title -->
 <!-- Blog Posts Section -->
 <section id="blog-posts" class="blog-posts section">
+    @foreach (var item in Model)
+    {
 
-    <div class="container">
-        <div class="row gy-4">
+        <br />
+        <div class="container">
+            <div class="row gy-4">
 
-            <div class="col-lg-4">
-                @foreach (var item in Model)
-                {
+                <div class="col-lg-4 ">
+
                     <article>
 
-                        <div class="post-img">
-                            <img src="assets/img/blog/blog-1.jpg" alt="" class="img-fluid">
-                        </div>
-
-                        <p class="post-category">@item.Icerik</p>
+                        @*<div class="post-img">
+                                <img src="assets/img/blog/blog-1.jpg" alt="" class="img-fluid">
+                            </div>*@
 
                         <h2 class="title">
-                            <a href="blog-details.html">@item.Baslik</a>
+                            <a href="/Home/BlogDetay/@item.BlogId">@item.Baslik</a>
                         </h2>
 
-                        <div class="d-flex align-items-center">
-                            @*<img src="~/@item.ResimURL" alt="" class="img-fluid post-author-img flex-shrink-0">*@
-                        </div>
+                        <p class="post-category">@item.Icerik</p>
+                        @*<img src="~/@item.ResimURL" alt="" class="img-fluid post-author-img flex-shrink-0">*@
+
 
                     </article>
-                }
-
-            </div><!-- End post list item -->
 
 
+                </div><!-- End post list item -->
+
+
+            </div>
         </div>
-    </div>
 
+
+
+
+
+    }
 </section><!-- /Blog Posts Section -->

@@ -1,0 +1,70 @@
+﻿@model KurumsalWebProjesi.Models.Model.Blog
+@{
+    ViewBag.Title = "BlogDetay";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section id="blog-posts" class="blog-posts section">
+
+
+    <div class="container">
+        <div class="row gy-4">
+            <div class="col-lg-4 ">
+                <article>
+                    @*<div class="post-img">
+                            <img src="assets/img/blog/blog-1.jpg" alt="" class="img-fluid">
+                        </div>*@
+                    <h2 class="title">
+                        <h3>@Model.Baslik</h3>
+                    </h2>
+                    <p class="post-category">@Model.Icerik</p>
+                    @*<img src="~/@item.ResimURL" alt="" class="img-fluid post-author-img flex-shrink-0">*@
+                </article>
+            </div><!-- End post list item -->
+
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-md-8">
+                        <h3>Yorum Yap</h3>
+                        <div>
+                            <input type="text" id="adsoyad" placeholder="Adınız Soyadınız" lass="form-control" required />
+                            <br />
+                            <br />
+                            <input type="email" id="eposta" placeholder="Epostanız" lass="form-control" required />
+                            <br />
+                            <br />
+                            <textarea typeof="text" id="icerik" class="form-control"></textarea>
+                            <br />
+                            <br />
+                            <button type="button" class="btn btn-success" id="gonder" value="Yorum Yap">Yorum Yap</button>
+
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+
+
+
+
+        </div>
+    </div>
+
+
+
+
+
+  
+</section><!-- /Blog Posts Section -->
+
+<script type="text/javascript>
+
+
+
+</script>
+
+
+

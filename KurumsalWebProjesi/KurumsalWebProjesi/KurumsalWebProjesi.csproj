@@ -1320,6 +1320,7 @@
     <Compile Include="Models\Model\Kategori.cs" />
     <Compile Include="Models\Model\Kimlik.cs" />
     <Compile Include="Models\Model\Slider.cs" />
+    <Compile Include="Models\Model\Yorum.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -1384,6 +1385,8 @@
     <Content Include="Views\Home\Hizmetlerimiz.cshtml" />
     <Content Include="Views\Home\Iletisim.cshtml" />
     <Content Include="Views\Home\Blog.cshtml" />
+    <Content Include="Views\Home\BlogKategoriPartial.cshtml" />
+    <Content Include="Views\Home\BlogDetay.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

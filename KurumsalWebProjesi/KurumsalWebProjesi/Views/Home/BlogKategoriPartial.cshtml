@@ -1,0 +1,10 @@
+﻿@model IEnumerable<KurumsalWebProjesi.Models.Model.Kategori>
+
+
+
+
+
+@foreach (var item in Model)
+{
+    <li><i ><a href="/Home/BlogDetay/@item.KategoriId">@item.KategoriAd</a> <span>Kategori Hakkında Yazılan Blog Sayısı(@item.Blogs.Count())</span></i></li>
+}

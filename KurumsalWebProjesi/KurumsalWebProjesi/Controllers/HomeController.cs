@@ -52,7 +52,7 @@ namespace KurumsalWebProjesi.Controllers
                 WebMail.UserName = "cdogrulama@gmail.com";
                 WebMail.Password = "yusuf719";
                 WebMail.SmtpPort = 587;
-                WebMail.Send("cdogrulama@gmail.com", konu, email+"</br>"+mesaj );
+                WebMail.Send("cdogrulama@gmail.com", konu, email + "</br>" + mesaj);
                 ViewBag.Uyari = "Mesajınız basaşrıyla gönderilmiştir";
 
 
@@ -67,8 +67,25 @@ namespace KurumsalWebProjesi.Controllers
         }
         public ActionResult Blog()
         {
-            return View(db.Blog.Include("Kategori").ToList().OrderByDescending(x=>x.BlogId));
+            return View(db.Blog.ToList().OrderByDescending(x => x.BlogId));
+            //Include("Kategori").
         }
+        public ActionResult BlogDetay(int id)
+        {
+            var blog = db.Blog.Include("Kategori").Where(x => x.BlogId == id).SingleOrDefault();
+            return View(blog);
+        }
+        public JsonResult YorumYap(string adsoyad, string eposta, string icerik, int blogid)
+        {
+            if (icerik == null)
+            {
+                return Json(true, JsonRequestBehavior.AllowGet);
+            }
+            db.Yorum.Add(new Yorum { AdSoyad = adsoyad, Eposta = eposta, Icerik = icerik, BlogId = blogid,Onay=false });
+            return Json(false, JsonRequestBehavior.AllowGet);
+        }
+
+
 
         public ActionResult FooterPartial()
         {
@@ -77,7 +94,11 @@ namespace KurumsalWebProjesi.Controllers
             ViewBag.Blog = db.Blog.ToList().OrderByDescending(x => x.BlogId);
             return PartialView();
         }
+        public ActionResult BlogKategoriPartial()
+        {
 
+            return PartialView(db.Kategori.Include("Blogs").ToList());
+        }
 
     }
 }

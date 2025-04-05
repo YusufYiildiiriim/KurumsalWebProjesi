@@ -16,7 +16,8 @@ namespace KurumsalWebProjesi.Models.Model
         public int? KategoriId { get; set; }
         public Kategori kategori{ get; set; }
 
-
+        public ICollection<Yorum> Yorums { get; set; }
+            
 
     }
 }
