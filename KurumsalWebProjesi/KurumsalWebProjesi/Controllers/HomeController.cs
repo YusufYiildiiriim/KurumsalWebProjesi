@@ -51,18 +51,18 @@ namespace KurumsalWebProjesi.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult Iletisim(string adsoyad = null, string email = null, string konu = null, string mesaj = null)
+        public ActionResult Iletisim(string adsoyad , string email , string konu, string mesaj )
         {
             if (adsoyad != null && email != null)
             {
                 WebMail.SmtpServer = "smtp.gmail.com";
                 WebMail.EnableSsl = true;
                 WebMail.UserName = "cdogrulama@gmail.com";
-                WebMail.Password = "yusuf719";
+                WebMail.Password = "hdupiwpgvputxmvm";
                 WebMail.SmtpPort = 587;
                 WebMail.Send("cdogrulama@gmail.com", konu, email + "</br>" + mesaj);
                 ViewBag.Uyari = "Mesajınız basaşrıyla gönderilmiştir";
-
+                return View();
 
             }
             else

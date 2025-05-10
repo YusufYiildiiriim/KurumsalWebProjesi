@@ -18,8 +18,9 @@ namespace KurumsalWebProjesi.Controllers
         // GET: Yorum
         public ActionResult Index()
         {
-            var yorum = db.Yorum.Include(y => y.YorumId);
-            return View(yorum.ToList());
+            //var yorum = db.Yorum.Include(y => y.YorumId);
+            var yorumlar = db.Yorum.Include("Blog");
+            return View(yorumlar.ToList());
         }
 
         // GET: Yorum/Details/5
