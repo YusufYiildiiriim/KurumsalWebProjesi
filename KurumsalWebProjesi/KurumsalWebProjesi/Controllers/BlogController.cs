@@ -26,12 +26,11 @@ namespace KurumsalWebProjesi.Controllers
             return View();
         }
         [HttpPost]
-        [ValidateInput(false)]
         [ValidateAntiForgeryToken]
         public ActionResult Create(Blog blog,HttpPostedFileBase ResimURL)
-
         {
-            if (ResimURL != null)
+
+            if (ResimURL !=null)
             {
                
                 WebImage img = new WebImage(ResimURL.InputStream);
@@ -42,10 +41,19 @@ namespace KurumsalWebProjesi.Controllers
                 img.Save("~/Uploads/Blog/" + blogimgname);
 
                 blog.ResimURL= "Uploads/Blog/" + blogimgname;
+
+                db.Blog.Add(blog);
+                db.SaveChanges();
+                return RedirectToAction("Index");
+
             }
-            db.Blog.Add(blog);
-            db.SaveChanges();
+            else
+            {
+             
+                
+            }
             return RedirectToAction("Index");
+
         }
         public ActionResult Edit(int id)
         {
@@ -98,8 +106,6 @@ namespace KurumsalWebProjesi.Controllers
             return View(blog);
 
         }
-
-        [HttpPost]
         public ActionResult Delete(int id)
         {
             var b = db.Blog.Find(id);

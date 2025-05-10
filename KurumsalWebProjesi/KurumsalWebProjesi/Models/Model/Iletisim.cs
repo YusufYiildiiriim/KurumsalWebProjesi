@@ -15,6 +15,7 @@ namespace KurumsalWebProjesi.Models.Model
         public string Adres { get; set; }
         [StringLength(250, ErrorMessage = "250 Karakter Olmalıdır")]
         public string Telefon { get; set; }
+        public string KurumsalTel { get; set; }
         public string Faks { get; set; }
         public string Whatsapp { get; set; }
         public string Facebook{ get; set; }

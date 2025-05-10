@@ -8,7 +8,7 @@
 <p>
     @Html.ActionLink("Yeni Oluştur", "Create")
 </p>
-<h1>test</h1>
+<h1>Site Kimlik Sayfası</h1>
 <p></p>
 <table class="table table-bordered">
     <tr>
@@ -43,7 +43,7 @@
                 @Html.Raw(item.Description)
             </td>
             <td>
-                <img class="image-responsive" src="@item.LogoURL" width="300" height="200" alt="Alternate Text" />
+                <img class="image-responsive" src="~/@item.LogoURL"  width="300" height="200" alt="Alternate Text" />
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Unvan)

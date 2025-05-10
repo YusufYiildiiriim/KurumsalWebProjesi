@@ -38,5 +38,30 @@ namespace KurumsalWebProjesi.Controllers
             
             return View(h);
         }
+        [HttpGet]
+        public ActionResult Add()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateInput(false)]
+        public ActionResult Add(string HakkimizdaAciklama)
+        {
+            if (!string.IsNullOrWhiteSpace(HakkimizdaAciklama))
+            {
+                db.Hakkimizda.Add(new Hakkimizda()
+                {
+                    Aciklama = HakkimizdaAciklama
+                });
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+
+            return View(); 
+        }
+
+
+
     }
 }

@@ -1,30 +1,27 @@
 ﻿@model IEnumerable<KurumsalWebProjesi.Models.Model.Blog>
+@using KurumsalWebProjesi.Helper;
 @{
     ViewBag.Title = "Blog";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
-
-
-
 <!-- Page Title -->
 <div class="page-title dark-background">
     <div class="container position-relative">
         @*<h1>Blog</h1>
             <p>Blog Yazılarımıza Alt Sekmeden Ulaşabilirsiniz.</p>*@
         <nav>
-            <ul>
+            <!--<ul>-->
                 @*<li><a href="index.html">Ana Menü</a></li>
                     <li class="current">Blog</li>*@
 
-                <li>
+                <!--<li>-->
 
-                    <h5>Blog Kategorilerimiz</h5>
+                    @*<h5>Blog Kategorilerimiz</h5>
                     @{
                         Html.RenderAction("BlogKategoriPartial", "Home");
-                    }
-                </li>
-            </ul>
+                    }*@
+                <!--</li>
+            </ul>-->
         </nav>
     </div>
 </div><!-- End Page Title -->
@@ -46,7 +43,7 @@
                             </div>*@
 
                         <h2 class="title">
-                            <a href="/Home/BlogDetay/@item.BlogId">@item.Baslik</a>
+                            <a href="/BlogPost/@SeoHelper.ToSeoUrl(item.Baslik).ToLower()-@item.BlogId">@item.Baslik</a>
                         </h2>
 
                         <p class="post-category">@item.Icerik</p>

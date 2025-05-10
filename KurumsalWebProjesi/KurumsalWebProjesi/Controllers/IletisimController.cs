@@ -47,7 +47,7 @@ namespace KurumsalWebProjesi.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "IletisimId,Adres,Telefon,Faks,Whatsapp,Facebook,Twitter,Instagram")] Iletisim iletisim)
+        public ActionResult Create([Bind(Include = "IletisimId,Adres,Telefon,Faks,Whatsapp,Facebook,Twitter,Instagram,KurumsalTel")] Iletisim iletisim)
         {
             if (ModelState.IsValid)
             {
@@ -79,7 +79,7 @@ namespace KurumsalWebProjesi.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "IletisimId,Adres,Telefon,Faks,Whatsapp,Facebook,Twitter,Instagram")] Iletisim iletisim)
+        public ActionResult Edit([Bind(Include = "IletisimId,Adres,Telefon,Faks,Whatsapp,Facebook,Twitter,Instagram,KurumsalTel")] Iletisim iletisim)
         {
             if (ModelState.IsValid)
             {

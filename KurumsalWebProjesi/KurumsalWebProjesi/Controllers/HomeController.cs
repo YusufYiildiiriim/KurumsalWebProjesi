@@ -14,8 +14,11 @@ namespace KurumsalWebProjesi.Controllers
     {
         private KurumsalDBContext db = new KurumsalDBContext();
         // GET: Home
+        [Route("")]
+        [Route("AnaSayfa")]
         public ActionResult Index()
         {
+            ViewBag.kimlik = db.Kimlik.SingleOrDefault();
             ViewBag.Hizmetler = db.Hizmet.ToList().OrderByDescending(x => x.HizmetId);
 
 
@@ -29,17 +32,22 @@ namespace KurumsalWebProjesi.Controllers
         {
             return View(db.Hizmet.ToList());
         }
+        [Route("Hakkimizda")]
         public ActionResult Hakkimizda()
         {
-
+            ViewBag.kimlik = db.Kimlik.SingleOrDefault();
             return View(db.Hakkimizda.SingleOrDefault());
         }
+        [Route("Hizmet")]
         public ActionResult Hizmetlerimiz()
         {
+            ViewBag.kimlik = db.Kimlik.SingleOrDefault();
             return View(db.Hizmet.ToList().OrderByDescending(x => x.HizmetId));
         }
+        [Route("Iletisim")]
         public ActionResult Iletisim()
         {
+            ViewBag.kimlik = db.Kimlik.SingleOrDefault();
             return View();
         }
         [HttpPost]
@@ -65,14 +73,25 @@ namespace KurumsalWebProjesi.Controllers
 
             return View();
         }
+        [Route("BlogPost")]
         public ActionResult Blog()
         {
+            ViewBag.kimlik = db.Kimlik.SingleOrDefault();
             return View(db.Blog.ToList().OrderByDescending(x => x.BlogId));
             //Include("Kategori").
         }
+        [Route("BlogPost/{Kategoriad}/{id:int}")]
+        public ActionResult KategoriBlog(int id)
+        {
+            var b = db.Blog.Include("Kategori").Where(x=>x.kategori.KategoriId == id).ToList();
+            return View(b);
+        }
+        [Route("BlogPost/{baslik}-{id:int}")]
         public ActionResult BlogDetay(int id)
         {
-            var blog = db.Blog.Include("Kategori").Where(x => x.BlogId == id).SingleOrDefault();
+            ViewBag.kimlik = db.Kimlik.SingleOrDefault();
+            var blog = db.Blog.Include("Kategori").Include("Yorums").Where(x => x.BlogId == id).SingleOrDefault();
+            
             return View(blog);
         }
         public JsonResult YorumYap(string adsoyad, string eposta, string icerik, int blogid)
@@ -82,6 +101,7 @@ namespace KurumsalWebProjesi.Controllers
                 return Json(true, JsonRequestBehavior.AllowGet);
             }
             db.Yorum.Add(new Yorum { AdSoyad = adsoyad, Eposta = eposta, Icerik = icerik, BlogId = blogid,Onay=false });
+            db.SaveChanges();
             return Json(false, JsonRequestBehavior.AllowGet);
         }
 
@@ -89,6 +109,7 @@ namespace KurumsalWebProjesi.Controllers
 
         public ActionResult FooterPartial()
         {
+            ViewBag.kimlik = db.Kimlik.SingleOrDefault();
             ViewBag.Iletisim = db.Iletisim.SingleOrDefault();
             ViewBag.Hizmetler = db.Hizmet.ToList().OrderByDescending(x => x.HizmetId);
             ViewBag.Blog = db.Blog.ToList().OrderByDescending(x => x.BlogId);
@@ -96,6 +117,7 @@ namespace KurumsalWebProjesi.Controllers
         }
         public ActionResult BlogKategoriPartial()
         {
+            ViewBag.kimlik = db.Kimlik.SingleOrDefault();
 
             return PartialView(db.Kategori.Include("Blogs").ToList());
         }

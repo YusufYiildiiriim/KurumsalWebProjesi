@@ -15,20 +15,27 @@ namespace KurumsalWebProjesi.Controllers
     {
         KurumsalDBContext db = new KurumsalDBContext();
         // GET: Admin
+        [Route("yonetimpaneli")]
         public ActionResult Index()
         {
             var sorgu = db.Kategori.ToList();
             return View(sorgu);
         }
+        [Route("yonetimpaneli/giris")]
         public ActionResult Login()
         {
             return View();
         }
-
+       
         [HttpPost]
         public ActionResult Login(Admin admin)
         {
             var login = db.Admin.Where(x => x.Eposta == admin.Eposta).SingleOrDefault();
+            if(login == null)
+            {
+                ViewBag.Uyari = "Kullanıcı adı ya da şifre Boş Bırakılamaz";
+                return View(admin);
+            }
             if(login.Eposta==admin.Eposta && login.Sifre == admin.Sifre)
             {
                 Session["adminid"] = login.AdminId;

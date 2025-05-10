@@ -3,67 +3,99 @@
     ViewBag.Title = "BlogDetay";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<br />
+<br />
+<br />
+<br />
 
 <section id="blog-posts" class="blog-posts section">
-
-
     <div class="container">
         <div class="row gy-4">
             <div class="col-lg-4 ">
                 <article>
-                    @*<div class="post-img">
-                            <img src="assets/img/blog/blog-1.jpg" alt="" class="img-fluid">
-                        </div>*@
                     <h2 class="title">
                         <h3>@Model.Baslik</h3>
                     </h2>
                     <p class="post-category">@Model.Icerik</p>
-                    @*<img src="~/@item.ResimURL" alt="" class="img-fluid post-author-img flex-shrink-0">*@
                 </article>
-            </div><!-- End post list item -->
+            </div>
 
             <div class="container">
-
                 <div class="row">
                     <div class="col-md-8">
                         <h3>Yorum Yap</h3>
-                        <div>
-                            <input type="text" id="adsoyad" placeholder="Adınız Soyadınız" lass="form-control" required />
+                        <form id="yorumForm">
+                            <input type="text" id="adsoyad" placeholder="Adınız Soyadınız" class="form-control" required />
                             <br />
+                            <input type="email" id="eposta" placeholder="Epostanız" class="form-control" required />
                             <br />
-                            <input type="email" id="eposta" placeholder="Epostanız" lass="form-control" required />
+                            <textarea id="icerik" class="form-control" placeholder="Yorumunuz" required></textarea>
                             <br />
-                            <br />
-                            <textarea typeof="text" id="icerik" class="form-control"></textarea>
-                            <br />
-                            <br />
-                            <button type="button" class="btn btn-success" id="gonder" value="Yorum Yap">Yorum Yap</button>
-
-                        </div>
+                            <button type="submit" class="btn btn-success" id="gonder" data-blogid="@Model.BlogId">Yorum Yap</button>
+                        </form>
                     </div>
-
-
                 </div>
             </div>
-
-
-
-
+        </div>
+        <br />
+        <br />
+        <br />
+        <h3>Blog İçin Yapılan Yorumlar</h3>
+        <br />
+        <br />
+        <br />
+        <div class="col-lg-4 ">
+            @foreach (var yorum in Model.Yorums.Where(x=>x.Onay==true))
+            {
+                <div class="yorum">
+                    <h4>@yorum.AdSoyad</h4>
+                    <p>@yorum.Icerik</p>
+                    <p><strong>@yorum.Eposta</strong></p>
+                </div>
+                <br />
+                <br />
+                <br />
+             }
+          
 
         </div>
+
     </div>
+</section>
 
 
+<script src="~/Scripts/jquery-3.7.1.js"></script>
 
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#yorumForm").on("submit", function (e) {
+            e.preventDefault(); // Formun normal submit olmasını engeller
 
+            var adsoyadi = $("#adsoyad").val();
+            var epostasi = $("#eposta").val();
+            var yorumunuz = $("#icerik").val();
+            var blogid = $("#gonder").data("blogid");
 
-  
-</section><!-- /Blog Posts Section -->
-
-<script type="text/javascript>
-
-
-
+            $.ajax({
+                url: '/Home/YorumYap',
+                type: 'POST',
+                dataType: 'json',
+                data: {
+                    adsoyad: adsoyadi,
+                    eposta: epostasi,
+                    icerik: yorumunuz,
+                    blogid: blogid
+                },
+                success: function (data) {
+                    alert(adsoyadi + " - Yorumunuz gönderildi. Kontrol edildikten sonra yayınlanacaktır.");
+                    $("#yorumForm")[0].reset(); // Formu temizle
+                },
+                error: function () {
+                    alert("Yorum gönderilirken bir hata oluştu. Lütfen tekrar deneyin.");
+                }
+            });
+        });
+    });
 </script>
 
 

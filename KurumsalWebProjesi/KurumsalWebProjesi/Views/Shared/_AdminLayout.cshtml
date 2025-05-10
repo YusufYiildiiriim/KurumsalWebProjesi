@@ -1,13 +1,13 @@
 ﻿@{ 
     if (Session["adminID"]==null)
     {
-        Response.Redirect("/Admin/Login");
+        Response.Redirect("/yonetimpaneli/giris/");
     }
 
 
 }
 
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html>
 <head>
     <meta charset="utf-8" />
@@ -347,6 +347,11 @@
                     <li>
                         <a href="/Blog/Index">
                             <i class="bi bi-circle"></i><span>Blog Kayıtları</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Yorum/Index">
+                            <i class="bi bi-circle"></i><span>Blog Yorumları</span>
                         </a>
                     </li>
                 </ul>

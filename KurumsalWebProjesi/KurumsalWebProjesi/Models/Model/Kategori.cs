@@ -15,6 +15,7 @@ namespace KurumsalWebProjesi.Models.Model
         [Required,StringLength(50,ErrorMessage ="50 Karekter Olmalıdır")]
         public string KategoriAd { get; set; }
         public string Aciklama{ get; set; }
+        public string txtsinav { get; set; }
         public ICollection<Blog>  Blogs { get; set; }
 
     }

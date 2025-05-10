@@ -1307,9 +1307,11 @@
     <Compile Include="Controllers\KategoriController.cs" />
     <Compile Include="Controllers\KimlikController.cs" />
     <Compile Include="Controllers\SlidersController.cs" />
+    <Compile Include="Controllers\YorumController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helper\SeoHelper.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\DataContext\KurumsalDBContext.cs" />
     <Compile Include="Models\Model\Admin.cs" />
@@ -1365,7 +1367,6 @@
     <Content Include="Views\Hizmet\Index.cshtml" />
     <Content Include="Views\Hizmet\Create.cshtml" />
     <Content Include="Views\Hizmet\Edit.cshtml" />
-    <Content Include="Views\Kategori\Create.cshtml" />
     <Content Include="Views\Kategori\Delete.cshtml" />
     <Content Include="Views\Kategori\Details.cshtml" />
     <Content Include="Views\Kategori\Edit.cshtml" />
@@ -1387,6 +1388,13 @@
     <Content Include="Views\Home\Blog.cshtml" />
     <Content Include="Views\Home\BlogKategoriPartial.cshtml" />
     <Content Include="Views\Home\BlogDetay.cshtml" />
+    <Content Include="Views\Hakkimizda\Add.cshtml" />
+    <Content Include="Views\Kategori\Create.cshtml" />
+    <Content Include="Views\Yorum\Create.cshtml" />
+    <Content Include="Views\Yorum\Delete.cshtml" />
+    <Content Include="Views\Yorum\Details.cshtml" />
+    <Content Include="Views\Yorum\Edit.cshtml" />
+    <Content Include="Views\Yorum\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

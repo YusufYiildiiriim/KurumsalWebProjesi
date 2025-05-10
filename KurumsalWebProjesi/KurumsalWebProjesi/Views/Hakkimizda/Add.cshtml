@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewBag.Title = "Add";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<br />
+<br />
+<br />
+<br />
+<br />
+@*<h2>Hakkımızda Açıklaması Ekle</h2>
+    <div class="form-horizontal" text-align="center" >
+
+        <form action="/Hakkimizda/Add" method="post">
+            <input type="text" name="aciklama" value="" />
+            <button type="submit">Açıklama Ekle</button>
+        </form>
+
+    </div>*@
+
+@using (Html.BeginForm("Add", "Hakkimizda", FormMethod.Post))
+{
+    <textarea name="HakkimizdaAciklama"></textarea>
+    <button type="submit">Gönder</button>
+}
+
+<a href="/Hakkimizda/Index">Geri Dön</a>
+
+
+
+
+
+
+
+

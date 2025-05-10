@@ -4,7 +4,7 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
-
+@*<a href="/Hakkimizda/Add">Yeni Ekle</a>*@
 
 <table class="table">
     <tr>
@@ -14,16 +14,16 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.Raw(item.Aciklama)
-        </td>
-        <td>
-            @Html.ActionLink("Güncelleme", "Edit", new { id=item.HakiimizdaId }) 
-
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.Raw(item.Aciklama)
+            </td>
+            <td>
+                @Html.ActionLink("Güncelleme", "Edit", new { id = item.HakiimizdaId })
+            </td>
+        </tr>
+    }
 
 </table>

@@ -47,7 +47,7 @@ namespace KurumsalWebProjesi.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "KategoriId,KategoriAd,Aciklama")] Kategori kategori)
+        public ActionResult Create([Bind(Include = "KategoriId,KategoriAd,Aciklama,txtsinav")] Kategori kategori)
         {
             if (ModelState.IsValid)
             {
@@ -79,7 +79,7 @@ namespace KurumsalWebProjesi.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "KategoriId,KategoriAd,Aciklama")] Kategori kategori)
+        public ActionResult Edit([Bind(Include = "KategoriId,KategoriAd,Aciklama,txtsinav")] Kategori kategori)
         {
             if (ModelState.IsValid)
             {

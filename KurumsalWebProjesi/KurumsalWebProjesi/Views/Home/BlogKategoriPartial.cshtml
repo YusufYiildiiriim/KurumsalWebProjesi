@@ -1,10 +1,10 @@
 ﻿@model IEnumerable<KurumsalWebProjesi.Models.Model.Kategori>
-
+@using KurumsalWebProjesi.Helper;
 
 
 
 
 @foreach (var item in Model)
 {
-    <li><i ><a href="/Home/BlogDetay/@item.KategoriId">@item.KategoriAd</a> <span>Kategori Hakkında Yazılan Blog Sayısı(@item.Blogs.Count())</span></i></li>
+    <li><i ><a href="/Blog/@SeoHelper.ToSeoUrl(item.KategoriAd).ToLower()"</a> <span>Kategori Hakkında Yazılan Blog Sayısı(@item.Blogs.Count())</span></i></li>
 }

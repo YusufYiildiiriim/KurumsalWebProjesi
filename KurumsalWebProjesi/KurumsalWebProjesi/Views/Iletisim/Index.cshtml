@@ -33,7 +33,9 @@
         <th>
             @Html.DisplayNameFor(model => model.Instagram)
         </th>
-        <th></th>
+        <th>
+            @Html.DisplayNameFor(model => model.KurumsalTel)
+        </th>
     </tr>
 
 @foreach (var item in Model) {
@@ -60,7 +62,10 @@
             @Html.DisplayFor(modelItem => item.Instagram)
         </td>
         <td>
-            @Html.ActionLink("Güncelle", "Edit", new { id=item.IletisimId }) 
+            @Html.DisplayFor(modelItem => item.KurumsalTel)
+        </td>
+        <td>
+            @Html.ActionLink("Güncelle", "Edit", new { id = item.IletisimId })
         </td>
     </tr>
 }

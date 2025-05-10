@@ -18,6 +18,9 @@
         <th>
             @Html.DisplayNameFor(model => model.Aciklama)
         </th>
+        <th>
+            @Html.DisplayNameFor(model => model.txtsinav)
+        </th>
         <th></th>
     </tr>
 
@@ -30,9 +33,12 @@
             @Html.DisplayFor(modelItem => item.Aciklama)
         </td>
         <td>
-            @Html.ActionLink("Düzenle", "Edit", new { id=item.KategoriId }) |
-            @Html.ActionLink("Detaylar", "Details", new { id=item.KategoriId }) |
-            @Html.ActionLink("Sil", "Delete", new { id=item.KategoriId })
+            @Html.DisplayFor(modelItem => item.txtsinav)
+        </td>
+        <td>
+            @Html.ActionLink("Düzenle", "Edit", new { id = item.KategoriId }) |
+            @Html.ActionLink("Detaylar", "Details", new { id = item.KategoriId }) |
+            @Html.ActionLink("Sil", "Delete", new { id = item.KategoriId })
         </td>
     </tr>
 }

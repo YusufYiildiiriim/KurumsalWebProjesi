@@ -7,9 +7,9 @@
 <h2>Kategori Düzenle</h2>
 
 <div class="form-horizontal">
-    @*<form action="/Blog/Create" method="post">*@
 
-    @using (Html.BeginForm("Edit", "Blog", FormMethod.Post, new { enctype = "multipart/form-data ," }))
+    @*<form action="/Blog/Edit" method="post" enctype="multipart/form-data" >*@
+    @using (Html.BeginForm("Edit", "Blog", FormMethod.Post, new { enctype = "multipart/form-data" }))
     {
         @Html.AntiForgeryToken();
         <h4>Iletisim</h4>
@@ -36,7 +36,7 @@
             <div class="form-group">
                 <label for="cname" class="control-label col-lg-2"> Önceki Resim<span class="required"></span></label>
                 <div class="col-md-10">
-                    <img src="@Model.ResimURL" alt="Alternate Text" />
+                    <img src="~/@Model.ResimURL" alt="Alternate Text" />
                 </div>
             </div>
             <div class="form-group">

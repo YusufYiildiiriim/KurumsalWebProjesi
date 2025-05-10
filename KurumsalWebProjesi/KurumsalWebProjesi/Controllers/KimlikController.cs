@@ -69,6 +69,12 @@ namespace KurumsalWebProjesi.Controllers
             return View(kimlik);
         }
 
+
+
+
+
+
+
       
     }
 }
