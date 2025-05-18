@@ -27,41 +27,29 @@
 </div><!-- End Page Title -->
 <!-- Blog Posts Section -->
 <section id="blog-posts" class="blog-posts section">
-    @foreach (var item in Model)
-    {
-
-        <br />
-        <div class="container">
-            <div class="row gy-4">
-
-                <div class="col-lg-4 ">
-
-                    <article>
-
-                        @*<div class="post-img">
-                                <img src="assets/img/blog/blog-1.jpg" alt="" class="img-fluid">
-                            </div>*@
-
+  
+    <div class="container">
+        <div class="row gy-4">
+            @foreach (var item in Model)
+            {
+                <div class="col-lg-6">
+                    <!-- 2 sütun için lg ekranlarda 6 birim -->
+                    <div style="background-color: whitesmoke; width: 100%; height: auto; text-align: center;">
+                        <br />
+                        <br />
+                        <img src="~/@item.ResimURL" alt="Resim" height="150" width="150" />
+                        <hr />
                         <h2 class="title">
                             <a href="/BlogPost/@SeoHelper.ToSeoUrl(item.Baslik).ToLower()-@item.BlogId">@item.Baslik</a>
                         </h2>
-
-                        <p class="post-category">@item.Icerik</p>
-                        @*<img src="~/@item.ResimURL" alt="" class="img-fluid post-author-img flex-shrink-0">*@
-
-
-                    </article>
-
-
-                </div><!-- End post list item -->
-
-
-            </div>
+                        <a class="btn-get-started" href="/BlogPost/@SeoHelper.ToSeoUrl(item.Baslik).ToLower()-@item.BlogId">Devamını Oku</a>
+                        <br />
+                        <br />
+                        @*<p class="post-category">@item.Icerik</p>*@
+                    </div>
+                </div>
+            }
         </div>
+    </div>
 
-
-
-
-
-    }
 </section><!-- /Blog Posts Section -->

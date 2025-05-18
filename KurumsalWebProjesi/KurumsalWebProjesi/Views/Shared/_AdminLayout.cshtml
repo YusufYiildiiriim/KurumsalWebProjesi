@@ -49,11 +49,11 @@
     * Author: BootstrapMade.com
     * License: https://bootstrapmade.com/license/
     ======================================================== -->
-   
-
-
-
-
+    <script src="~/Scripts/DataTables/jquery.dataTables.js"></script>
+    <link href="~/Content/DataTables/css/jquery.dataTables.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-3.7.1.js"></script>
+    <link href="~/Content/DataTables/css/dataTables.bootstrap4.css" rel="stylesheet" />
+    <script src="~/Scripts/DataTables/dataTables.bootstrap4.js"></script>
 
 
 </head>
@@ -66,7 +66,7 @@
     <header id="header" class="header fixed-top d-flex align-items-center">
 
         <div class="d-flex align-items-center justify-content-between">
-            <a href="/Admin/Index/" class="logo d-flex align-items-center">
+            <a href="/yonetimpaneli" class="logo d-flex align-items-center">
                 <img src="assets/img/logo.png" alt="">
                 <span class="d-none d-lg-block">Kurumsal Web</span>
             </a>
@@ -157,6 +157,9 @@
         <li>
             <hr class="dropdown-divider">
         </li>*@
+
+                  
+
                         @{if (Session["yetki"].ToString() == "Admin")
                             {
 
@@ -186,7 +189,7 @@
         <ul class="sidebar-nav" id="sidebar-nav">
 
             <li class="nav-item">
-                <a class="nav-link " href="/Admin/Index">
+                <a class="nav-link " href="/yonetimpaneli">
                     <i class="bi bi-grid"></i>
                     <span>Admin Özet</span>
                 </a>

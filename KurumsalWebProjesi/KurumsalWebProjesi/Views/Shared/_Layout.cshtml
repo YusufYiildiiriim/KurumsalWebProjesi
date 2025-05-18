@@ -37,16 +37,16 @@
 </head>
 
 <body class="index-page">
-    <header id="header" class="header d-flex align-items-center fixed-top">
+    <header id="header" class="header d-flex align-items-center fixed-top" style="background-color:#274254">
         <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
-            <a href="/Home/Index" class="logo d-flex align-items-center">
+            <a href="/Anasayfa" class="logo d-flex align-items-center">
                 <!-- Uncomment the line below if you also wish to use an image logo -->
                 <!-- <img src="assets/img/logo.png" alt=""> -->
                 <h1 class="sitename">@*Kurumsal Web*@ <img src="~/@ViewBag.Kimlik.LogoURL" alt="Alternate Text" /> @ViewBag.Kimlik.Unvan </h1>
             </a>
 
-            <nav id="navmenu" class="navmenu">
+            <nav id="navmenu" class="navmenu" >
                 <ul>
                     <li><a href="/Anasayfa" class="active">Ana Sayfa</a></li>
                     <li><a href="/Hakkimizda">Hakkımızda</a></li>
@@ -60,10 +60,10 @@
         </div>
     </header>
 
-
+    @RenderSection("sliderArea", required: false)
     @RenderBody();
 
-    @{ 
+    @{
         Html.RenderAction("FooterPartial", "Home");
     }
 

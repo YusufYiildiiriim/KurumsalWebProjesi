@@ -25,17 +25,39 @@
 
         }*@
 
-            @foreach (var item in Model)
-            {
-                <div class="carousel-item @(item == Model.First() ? "active" : "")">
-                    <div class="carousel-container">
-                        <h2>@item.Baslik</h2>
-                        <p>@item.Aciklama</p>
-                        @*<img src="~/@item.ResimURL" alt="Alternate Text" />*@
-                        <a href="#about" class="btn-get-started">Daha Fazlasını Oku</a>
+        @foreach (var item in Model)
+        {
+
+            <div class="carousel-item @(item == Model.First() ? "active" : "")" style="text-align: center; padding: 20px;">
+                <div style="text-align:center;">
+                    <div style="display: flex; justify-content: center; align-items: center;">
+                        <img src="~/@item.ResimURL"
+                             alt="Alternate Text"
+                             class="mx-auto d-block"
+                             style="height: 150px; width: 300px;" />
+
                     </div>
-                </div><!-- End Carousel Item -->
-            }
+
+                    <br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+                    <h2>@item.Baslik</h2>
+                    <p>@item.Aciklama</p>
+                    <a href="~/Iletisim" class="btn-get-started">Bizimle İletişime Geç</a>
+                </div>
+            </div>
+        }
+            @*@foreach (var item in Model)
+            {
+                <div class="carousel-item @(item == Model.First() ? "active" : "")" style="text-align: center; padding: 20px;">
+                    <div style="display: flex; justify-content: center; align-items: center;">
+                        <img src="~/@item.ResimURL" alt="@item.Baslik" style="height: 150px; width: 300px;" />
+                    </div>
+
+                    <h2>@item.Baslik</h2>
+                    <p>@item.Aciklama</p>
+                </div>
+            }*@
+
 
 
             <a class="carousel-control-prev" href="#hero-carousel" role="button" data-bs-slide="prev">
