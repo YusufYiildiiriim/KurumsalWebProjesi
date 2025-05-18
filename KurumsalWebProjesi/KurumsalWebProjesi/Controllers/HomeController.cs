@@ -12,6 +12,16 @@ namespace KurumsalWebProjesi.Controllers
 {
     public class HomeController : Controller
     {
+        public ActionResult ChangeLanguage(string lang)
+        {
+            HttpCookie cookie = new HttpCookie("lang", lang);
+            cookie.Expires = DateTime.Now.AddYears(1);
+            Response.Cookies.Add(cookie);
+            return Redirect(Request.UrlReferrer != null ? Request.UrlReferrer.ToString() : Url.Action("Index", "Home"));
+        }
+
+
+
         private KurumsalDBContext db = new KurumsalDBContext();
         // GET: Home
         [Route("")]

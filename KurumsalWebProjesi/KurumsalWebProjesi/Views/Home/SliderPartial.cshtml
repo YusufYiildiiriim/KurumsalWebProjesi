@@ -42,7 +42,7 @@
 
                     <h2>@item.Baslik</h2>
                     <p>@item.Aciklama</p>
-                    <a href="~/Iletisim" class="btn-get-started">Bizimle İletişime Geç</a>
+                    <a href="~/Iletisim" class="btn-get-started">@(HttpContext.GetGlobalResourceObject("Labels", "Home_slider_bizimleiletisimegec"))</a>
                 </div>
             </div>
         }

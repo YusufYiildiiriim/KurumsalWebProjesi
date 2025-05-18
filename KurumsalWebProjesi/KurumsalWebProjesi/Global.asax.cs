@@ -14,5 +14,12 @@ namespace KurumsalWebProjesi
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
         }
+        protected void Application_BeginRequest()
+        {
+            var culture = (HttpContext.Current.Request.Cookies["lang"]?.Value) ?? "tr";
+            System.Threading.Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo(culture);
+            System.Threading.Thread.CurrentThread.CurrentCulture = new System.Globalization.CultureInfo(culture);
+        }
+
     }
 }

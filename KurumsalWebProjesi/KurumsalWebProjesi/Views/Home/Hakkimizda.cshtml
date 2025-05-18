@@ -52,14 +52,9 @@
         <!-- Page Title -->
         <div class="page-title dark-background">
             <div class="container position-relative">
-                <h1>Hakkımızda</h1>
-                <p>Hakkımızda Bilgiler</p>
-                <nav class="breadcrumbs">
-                    <ol>
-                        <li><a href="/Home/Index">Ana Menü</a></li>
-                        <li class="/Home/Hakkımızda">Hakkımızda</li>
-                    </ol>
-                </nav>
+                <h1>@(HttpContext.GetGlobalResourceObject("Labels", "Hakkimizda_Hakkimizda"))</h1>
+                <p>@(HttpContext.GetGlobalResourceObject("Labels", "Hakkimizda_Hakkimizdabilgiler"))</p>
+
             </div>
         </div><!-- End Page Title -->
         <!-- About Section -->

@@ -114,3 +114,5 @@ C:\Users\bahta\Documents\Bireysel_Gelistirilenler\Web Projesi\KurumsalWebProjesi
 C:\Users\bahta\Documents\Bireysel_Gelistirilenler\Web Projesi\KurumsalWebProjesi\KurumsalWebProjesi\obj\Debug\Kurumsal.25FFB2ED.Up2Date
 C:\Users\bahta\Documents\Bireysel_Gelistirilenler\Web Projesi\KurumsalWebProjesi\KurumsalWebProjesi\obj\Debug\KurumsalWebProjesi.dll
 C:\Users\bahta\Documents\Bireysel_Gelistirilenler\Web Projesi\KurumsalWebProjesi\KurumsalWebProjesi\obj\Debug\KurumsalWebProjesi.pdb
+C:\Users\bahta\Documents\Bireysel_Gelistirilenler\Web Projesi\KurumsalWebProjesi\KurumsalWebProjesi\obj\Debug\KurumsalWebProjesi.App_GlobalResources.Labels.resources
+C:\Users\bahta\Documents\Bireysel_Gelistirilenler\Web Projesi\KurumsalWebProjesi\KurumsalWebProjesi\obj\Debug\KurumsalWebProjesi.csproj.GenerateResource.cache

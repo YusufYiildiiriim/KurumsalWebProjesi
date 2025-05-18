@@ -7,14 +7,9 @@
 <!-- Page Title -->
 <div class="page-title dark-background">
     <div class="container position-relative">
-        <h1>Bizimle İrtibata Geçin</h1>
-        <p>Aşağıdaki formdan bize mail gönderebilirsiniz</p>
-        <nav class="breadcrumbs">
-            <ol>
-                <li><a href="index.html">Ana Sayfa</a></li>
-                <li class="current">İletişim</li>
-            </ol>
-        </nav>
+        <h1>@(HttpContext.GetGlobalResourceObject("Labels", "Home_slider_bizimleiletisimegec"))</h1>
+        @*<p>Aşağıdaki formdan bize mail gönderebilirsiniz</p>*@
+
     </div>
 </div><!-- End Page Title -->
 <!-- Contact Section -->
@@ -28,19 +23,19 @@
                     <div class="row gy-4">
 
                         <div class="col-md-6">
-                            <input type="text" name="adsoyad" class="form-control" placeholder="İsim" required="">
+                            <input type="text" name="adsoyad" class="form-control" placeholder="@(HttpContext.GetGlobalResourceObject("Labels", "Iletisim_isim"))" required="">
                         </div>
 
                         <div class="col-md-6 ">
-                            <input type="email" class="form-control" name="email" placeholder="Email" required="">
+                            <input type="email" class="form-control" name="email" placeholder="@(HttpContext.GetGlobalResourceObject("Labels", "Iletisim_Email"))" required="">
                         </div>
 
                         <div class="col-md-12">
-                            <input type="text" class="form-control" name="konu" placeholder="Konu" required="">
+                            <input type="text" class="form-control" name="konu" placeholder="@(HttpContext.GetGlobalResourceObject("Labels", "Iletisim_Konu"))" required="">
                         </div>
 
                         <div class="col-md-12">
-                            <textarea class="form-control" name="mesaj" rows="4" placeholder="Mesaj" required=""></textarea>
+                            <textarea class="form-control" name="mesaj" rows="4" placeholder="@(HttpContext.GetGlobalResourceObject("Labels", "Iletisim_Mesaj"))" required=""></textarea>
                         </div>
 
                         <div class="col-md-12 text-center">
@@ -48,7 +43,7 @@
                             <div class="error-message"></div>
                             <div class="sent-message">@ViewBag.Uyari <br /> Teşekkür ederiz.</div>
 
-                            <button type="submit">Mesaj Gönder</button>
+                            <button type="submit">@(HttpContext.GetGlobalResourceObject("Labels", "Iletisim_MesajGonder"))</button>
                         </div>
                         <div class="mt-5" data-aos="fade-up" data-aos-delay="200" >
                             <iframe style="border:0; width: 100%; height: 370px;" src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d3416890.071986663!2d35.38577763671542!3d41.83350739533719!3m2!1i1024!2i768!4f13.1!5e0!3m2!1str!2str!4v1743763739407!5m2!1str!2str"frameborder="0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>

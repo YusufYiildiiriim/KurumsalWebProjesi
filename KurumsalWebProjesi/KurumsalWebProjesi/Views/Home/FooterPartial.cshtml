@@ -25,11 +25,11 @@
                     <span class="sitename">@ViewBag.Iletisim.Adres</span>
                 </a>
                 <div class="footer-contact pt-3">
-                    <p class="mt-3"><strong>Phone:</strong> <span>@ViewBag.Iletisim.Telefon</span></p>
-                    <p><strong>Faks:</strong> <span>@ViewBag.Iletisim.Faks</span></p>
+                    <p class="mt-3"><strong>@(HttpContext.GetGlobalResourceObject("Labels", "Home_footertelefon"))</strong> <span>@ViewBag.Iletisim.Telefon</span></p>
+                    <p><strong>@(HttpContext.GetGlobalResourceObject("Labels", "Home_footersosyalmecralar"))</strong> <span>@ViewBag.Iletisim.Faks</span></p>
 
                     <div class="col-lg-4 col-md-12">
-                        <h4>Sosyal Mecralar</h4>
+                        <h4>@(HttpContext.GetGlobalResourceObject("Labels", "Home_footerfaks"))</h4>
                         <div class="social-links d-flex">
                             <a href="www.Facebook.com/@ViewBag.Iletisim.Facebook"><i class="bi bi-facebook"></i></a>
                             <a href="www.Twitter.com/@ViewBag.Iletisim.Twitter"><i class="bi bi-twitter"></i></a>
@@ -41,7 +41,7 @@
 
 
             <div class="col-lg-2 col-md-3 footer-links">
-                <h4>Hizmetler</h4>
+                <h4>@(HttpContext.GetGlobalResourceObject("Labels", "Home_footer-sonblogyazilari"))</h4>
                 <ul>
                     @foreach (var item in @ViewBag.Hizmetler)
                     {
@@ -51,7 +51,7 @@
             </div>
 
             <div class="col-lg-2 col-md-3 footer-links">
-                <h4>Son Blog Yazıları</h4>
+                <h4>@(HttpContext.GetGlobalResourceObject("Labels", "Blog_detay_blogicinyapilanyorumlar"))</h4>
                 <ul>
                     @foreach (var item in @ViewBag.Blog)
                     {
@@ -65,7 +65,7 @@
     </div>
 
     <div class="container copyright text-center mt-4">
-        <p>@DateTime.Now.Year <span></span> <strong class="px-1 sitename">KurumsalWeb</strong> <span>Tüm Hakları Saklıdır</span></p>
+        <p>@DateTime.Now.Year <span></span> <strong class="px-1 sitename">KurumsalWeb</strong> <span>@(HttpContext.GetGlobalResourceObject("Labels", "Home_footer_tumhaklarisaklidir"))</span></p>
         <div class="credits">
             <!-- All the links in the footer should remain intact. -->
             <!-- You can delete the links only if you've purchased the pro version. -->

@@ -3,40 +3,44 @@
   "WorkspaceRootPath": "C:\\Users\\bahta\\Documents\\Bireysel_Gelistirilenler\\Web Projesi\\KurumsalWebProjesi\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6F1A62E8-02CE-449A-86CD-B5E333C7C41D}|KurumsalWebProjesi\\KurumsalWebProjesi.csproj|c:\\users\\bahta\\documents\\bireysel_gelistirilenler\\web projesi\\kurumsalwebprojesi\\kurumsalwebprojesi\\views\\home\\footerpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{6F1A62E8-02CE-449A-86CD-B5E333C7C41D}|KurumsalWebProjesi\\KurumsalWebProjesi.csproj|solutionrelative:kurumsalwebprojesi\\views\\home\\footerpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{6F1A62E8-02CE-449A-86CD-B5E333C7C41D}|KurumsalWebProjesi\\KurumsalWebProjesi.csproj|c:\\users\\bahta\\documents\\bireysel_gelistirilenler\\web projesi\\kurumsalwebprojesi\\kurumsalwebprojesi\\views\\home\\iletisim.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6F1A62E8-02CE-449A-86CD-B5E333C7C41D}|KurumsalWebProjesi\\KurumsalWebProjesi.csproj|solutionrelative:kurumsalwebprojesi\\views\\home\\iletisim.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6F1A62E8-02CE-449A-86CD-B5E333C7C41D}|KurumsalWebProjesi\\KurumsalWebProjesi.csproj|c:\\users\\bahta\\documents\\bireysel_gelistirilenler\\web projesi\\kurumsalwebprojesi\\kurumsalwebprojesi\\views\\home\\sliderpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{6F1A62E8-02CE-449A-86CD-B5E333C7C41D}|KurumsalWebProjesi\\KurumsalWebProjesi.csproj|solutionrelative:kurumsalwebprojesi\\views\\home\\sliderpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6F1A62E8-02CE-449A-86CD-B5E333C7C41D}|KurumsalWebProjesi\\KurumsalWebProjesi.csproj|c:\\users\\bahta\\documents\\bireysel_gelistirilenler\\web projesi\\kurumsalwebprojesi\\kurumsalwebprojesi\\views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{6F1A62E8-02CE-449A-86CD-B5E333C7C41D}|KurumsalWebProjesi\\KurumsalWebProjesi.csproj|solutionrelative:kurumsalwebprojesi\\views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6F1A62E8-02CE-449A-86CD-B5E333C7C41D}|KurumsalWebProjesi\\KurumsalWebProjesi.csproj|c:\\users\\bahta\\documents\\bireysel_gelistirilenler\\web projesi\\kurumsalwebprojesi\\kurumsalwebprojesi\\controllers\\kategoricontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6F1A62E8-02CE-449A-86CD-B5E333C7C41D}|KurumsalWebProjesi\\KurumsalWebProjesi.csproj|solutionrelative:kurumsalwebprojesi\\controllers\\kategoricontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6F1A62E8-02CE-449A-86CD-B5E333C7C41D}|KurumsalWebProjesi\\KurumsalWebProjesi.csproj|c:\\users\\bahta\\documents\\bireysel_gelistirilenler\\web projesi\\kurumsalwebprojesi\\kurumsalwebprojesi\\app_globalresources\\labels.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
+      "RelativeMoniker": "D:0:0:{6F1A62E8-02CE-449A-86CD-B5E333C7C41D}|KurumsalWebProjesi\\KurumsalWebProjesi.csproj|solutionrelative:kurumsalwebprojesi\\app_globalresources\\labels.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6F1A62E8-02CE-449A-86CD-B5E333C7C41D}|KurumsalWebProjesi\\KurumsalWebProjesi.csproj|c:\\users\\bahta\\documents\\bireysel_gelistirilenler\\web projesi\\kurumsalwebprojesi\\kurumsalwebprojesi\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{6F1A62E8-02CE-449A-86CD-B5E333C7C41D}|KurumsalWebProjesi\\KurumsalWebProjesi.csproj|solutionrelative:kurumsalwebprojesi\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6F1A62E8-02CE-449A-86CD-B5E333C7C41D}|KurumsalWebProjesi\\KurumsalWebProjesi.csproj|c:\\users\\bahta\\documents\\bireysel_gelistirilenler\\web projesi\\kurumsalwebprojesi\\kurumsalwebprojesi\\views\\hizmet\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{6F1A62E8-02CE-449A-86CD-B5E333C7C41D}|KurumsalWebProjesi\\KurumsalWebProjesi.csproj|solutionrelative:kurumsalwebprojesi\\views\\hizmet\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{6F1A62E8-02CE-449A-86CD-B5E333C7C41D}|KurumsalWebProjesi\\KurumsalWebProjesi.csproj|c:\\users\\bahta\\documents\\bireysel_gelistirilenler\\web projesi\\kurumsalwebprojesi\\kurumsalwebprojesi\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6F1A62E8-02CE-449A-86CD-B5E333C7C41D}|KurumsalWebProjesi\\KurumsalWebProjesi.csproj|solutionrelative:kurumsalwebprojesi\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6F1A62E8-02CE-449A-86CD-B5E333C7C41D}|KurumsalWebProjesi\\KurumsalWebProjesi.csproj|c:\\users\\bahta\\documents\\bireysel_gelistirilenler\\web projesi\\kurumsalwebprojesi\\kurumsalwebprojesi\\views\\hizmet\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{6F1A62E8-02CE-449A-86CD-B5E333C7C41D}|KurumsalWebProjesi\\KurumsalWebProjesi.csproj|solutionrelative:kurumsalwebprojesi\\views\\hizmet\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{6F1A62E8-02CE-449A-86CD-B5E333C7C41D}|KurumsalWebProjesi\\KurumsalWebProjesi.csproj|c:\\users\\bahta\\documents\\bireysel_gelistirilenler\\web projesi\\kurumsalwebprojesi\\kurumsalwebprojesi\\views\\home\\hizmetlerimiz.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6F1A62E8-02CE-449A-86CD-B5E333C7C41D}|KurumsalWebProjesi\\KurumsalWebProjesi.csproj|solutionrelative:kurumsalwebprojesi\\views\\home\\hizmetlerimiz.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6F1A62E8-02CE-449A-86CD-B5E333C7C41D}|KurumsalWebProjesi\\KurumsalWebProjesi.csproj|c:\\users\\bahta\\documents\\bireysel_gelistirilenler\\web projesi\\kurumsalwebprojesi\\kurumsalwebprojesi\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{6F1A62E8-02CE-449A-86CD-B5E333C7C41D}|KurumsalWebProjesi\\KurumsalWebProjesi.csproj|solutionrelative:kurumsalwebprojesi\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{6F1A62E8-02CE-449A-86CD-B5E333C7C41D}|KurumsalWebProjesi\\KurumsalWebProjesi.csproj|c:\\users\\bahta\\documents\\bireysel_gelistirilenler\\web projesi\\kurumsalwebprojesi\\kurumsalwebprojesi\\views\\home\\footerpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6F1A62E8-02CE-449A-86CD-B5E333C7C41D}|KurumsalWebProjesi\\KurumsalWebProjesi.csproj|solutionrelative:kurumsalwebprojesi\\views\\home\\footerpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6F1A62E8-02CE-449A-86CD-B5E333C7C41D}|KurumsalWebProjesi\\KurumsalWebProjesi.csproj|c:\\users\\bahta\\documents\\bireysel_gelistirilenler\\web projesi\\kurumsalwebprojesi\\kurumsalwebprojesi\\views\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{6F1A62E8-02CE-449A-86CD-B5E333C7C41D}|KurumsalWebProjesi\\KurumsalWebProjesi.csproj|solutionrelative:kurumsalwebprojesi\\views\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+      "AbsoluteMoniker": "D:0:0:{6F1A62E8-02CE-449A-86CD-B5E333C7C41D}|KurumsalWebProjesi\\KurumsalWebProjesi.csproj|c:\\users\\bahta\\documents\\bireysel_gelistirilenler\\web projesi\\kurumsalwebprojesi\\kurumsalwebprojesi\\views\\home\\blogdetay.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6F1A62E8-02CE-449A-86CD-B5E333C7C41D}|KurumsalWebProjesi\\KurumsalWebProjesi.csproj|solutionrelative:kurumsalwebprojesi\\views\\home\\blogdetay.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F1A62E8-02CE-449A-86CD-B5E333C7C41D}|KurumsalWebProjesi\\KurumsalWebProjesi.csproj|c:\\users\\bahta\\documents\\bireysel_gelistirilenler\\web projesi\\kurumsalwebprojesi\\kurumsalwebprojesi\\views\\home\\blog.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6F1A62E8-02CE-449A-86CD-B5E333C7C41D}|KurumsalWebProjesi\\KurumsalWebProjesi.csproj|solutionrelative:kurumsalwebprojesi\\views\\home\\blog.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F1A62E8-02CE-449A-86CD-B5E333C7C41D}|KurumsalWebProjesi\\KurumsalWebProjesi.csproj|c:\\users\\bahta\\documents\\bireysel_gelistirilenler\\web projesi\\kurumsalwebprojesi\\kurumsalwebprojesi\\views\\home\\sliderpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6F1A62E8-02CE-449A-86CD-B5E333C7C41D}|KurumsalWebProjesi\\KurumsalWebProjesi.csproj|solutionrelative:kurumsalwebprojesi\\views\\home\\sliderpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F1A62E8-02CE-449A-86CD-B5E333C7C41D}|KurumsalWebProjesi\\KurumsalWebProjesi.csproj|c:\\users\\bahta\\documents\\bireysel_gelistirilenler\\web projesi\\kurumsalwebprojesi\\kurumsalwebprojesi\\views\\home\\hakkimizda.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6F1A62E8-02CE-449A-86CD-B5E333C7C41D}|KurumsalWebProjesi\\KurumsalWebProjesi.csproj|solutionrelative:kurumsalwebprojesi\\views\\home\\hakkimizda.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,8 +50,22 @@
       "DocumentGroups": [
         {
           "DockedHeight": 451,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 6,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\bahta\\Documents\\Bireysel_Gelistirilenler\\Web Projesi\\KurumsalWebProjesi\\KurumsalWebProjesi\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "KurumsalWebProjesi\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\bahta\\Documents\\Bireysel_Gelistirilenler\\Web Projesi\\KurumsalWebProjesi\\KurumsalWebProjesi\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "KurumsalWebProjesi\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAABoAAAAAAAAAAAAswC0AAABUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-18T15:35:45.335Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
@@ -62,119 +80,106 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "KategoriController.cs",
-              "DocumentMoniker": "C:\\Users\\bahta\\Documents\\Bireysel_Gelistirilenler\\Web Projesi\\KurumsalWebProjesi\\KurumsalWebProjesi\\Controllers\\KategoriController.cs",
-              "RelativeDocumentMoniker": "KurumsalWebProjesi\\Controllers\\KategoriController.cs",
-              "ToolTip": "C:\\Users\\bahta\\Documents\\Bireysel_Gelistirilenler\\Web Projesi\\KurumsalWebProjesi\\KurumsalWebProjesi\\Controllers\\KategoriController.cs",
-              "RelativeToolTip": "KurumsalWebProjesi\\Controllers\\KategoriController.cs",
-              "ViewState": "AgIAAF4AAAAAAAAAAAAwwHIAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-18T14:42:20.076Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\bahta\\Documents\\Bireysel_Gelistirilenler\\Web Projesi\\KurumsalWebProjesi\\KurumsalWebProjesi\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "KurumsalWebProjesi\\Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\bahta\\Documents\\Bireysel_Gelistirilenler\\Web Projesi\\KurumsalWebProjesi\\KurumsalWebProjesi\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "KurumsalWebProjesi\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAAADYAAAA4AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-18T14:27:08.858Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "FooterPartial.cshtml",
-              "DocumentMoniker": "C:\\Users\\bahta\\Documents\\Bireysel_Gelistirilenler\\Web Projesi\\KurumsalWebProjesi\\KurumsalWebProjesi\\Views\\Home\\FooterPartial.cshtml",
-              "RelativeDocumentMoniker": "KurumsalWebProjesi\\Views\\Home\\FooterPartial.cshtml",
-              "ToolTip": "C:\\Users\\bahta\\Documents\\Bireysel_Gelistirilenler\\Web Projesi\\KurumsalWebProjesi\\KurumsalWebProjesi\\Views\\Home\\FooterPartial.cshtml",
-              "RelativeToolTip": "KurumsalWebProjesi\\Views\\Home\\FooterPartial.cshtml",
-              "ViewState": "AgIAACQAAAAAAAAAAAAAADQAAAA4AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-18T14:26:31.061Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 8,
               "Title": "SliderPartial.cshtml",
               "DocumentMoniker": "C:\\Users\\bahta\\Documents\\Bireysel_Gelistirilenler\\Web Projesi\\KurumsalWebProjesi\\KurumsalWebProjesi\\Views\\Home\\SliderPartial.cshtml",
               "RelativeDocumentMoniker": "KurumsalWebProjesi\\Views\\Home\\SliderPartial.cshtml",
               "ToolTip": "C:\\Users\\bahta\\Documents\\Bireysel_Gelistirilenler\\Web Projesi\\KurumsalWebProjesi\\KurumsalWebProjesi\\Views\\Home\\SliderPartial.cshtml",
               "RelativeToolTip": "KurumsalWebProjesi\\Views\\Home\\SliderPartial.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-18T20:14:33.296Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Hizmetlerimiz.cshtml",
+              "DocumentMoniker": "C:\\Users\\bahta\\Documents\\Bireysel_Gelistirilenler\\Web Projesi\\KurumsalWebProjesi\\KurumsalWebProjesi\\Views\\Home\\Hizmetlerimiz.cshtml",
+              "RelativeDocumentMoniker": "KurumsalWebProjesi\\Views\\Home\\Hizmetlerimiz.cshtml",
+              "ToolTip": "C:\\Users\\bahta\\Documents\\Bireysel_Gelistirilenler\\Web Projesi\\KurumsalWebProjesi\\KurumsalWebProjesi\\Views\\Home\\Hizmetlerimiz.cshtml",
+              "RelativeToolTip": "KurumsalWebProjesi\\Views\\Home\\Hizmetlerimiz.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-18T14:26:21.214Z",
+              "WhenOpened": "2025-05-18T20:13:10.336Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "web.config",
-              "DocumentMoniker": "C:\\Users\\bahta\\Documents\\Bireysel_Gelistirilenler\\Web Projesi\\KurumsalWebProjesi\\KurumsalWebProjesi\\Views\\web.config",
-              "RelativeDocumentMoniker": "KurumsalWebProjesi\\Views\\web.config",
-              "ToolTip": "C:\\Users\\bahta\\Documents\\Bireysel_Gelistirilenler\\Web Projesi\\KurumsalWebProjesi\\KurumsalWebProjesi\\Views\\web.config",
-              "RelativeToolTip": "KurumsalWebProjesi\\Views\\web.config",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2025-05-18T14:19:24.601Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "_ViewStart.cshtml",
-              "DocumentMoniker": "C:\\Users\\bahta\\Documents\\Bireysel_Gelistirilenler\\Web Projesi\\KurumsalWebProjesi\\KurumsalWebProjesi\\Views\\_ViewStart.cshtml",
-              "RelativeDocumentMoniker": "KurumsalWebProjesi\\Views\\_ViewStart.cshtml",
-              "ToolTip": "C:\\Users\\bahta\\Documents\\Bireysel_Gelistirilenler\\Web Projesi\\KurumsalWebProjesi\\KurumsalWebProjesi\\Views\\_ViewStart.cshtml",
-              "RelativeToolTip": "KurumsalWebProjesi\\Views\\_ViewStart.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "Iletisim.cshtml",
+              "DocumentMoniker": "C:\\Users\\bahta\\Documents\\Bireysel_Gelistirilenler\\Web Projesi\\KurumsalWebProjesi\\KurumsalWebProjesi\\Views\\Home\\Iletisim.cshtml",
+              "RelativeDocumentMoniker": "KurumsalWebProjesi\\Views\\Home\\Iletisim.cshtml",
+              "ToolTip": "C:\\Users\\bahta\\Documents\\Bireysel_Gelistirilenler\\Web Projesi\\KurumsalWebProjesi\\KurumsalWebProjesi\\Views\\Home\\Iletisim.cshtml",
+              "RelativeToolTip": "KurumsalWebProjesi\\Views\\Home\\Iletisim.cshtml",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAABwAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-18T14:19:22.315Z",
+              "WhenOpened": "2025-05-18T20:13:09.665Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "_AdminLayout.cshtml",
-              "DocumentMoniker": "C:\\Users\\bahta\\Documents\\Bireysel_Gelistirilenler\\Web Projesi\\KurumsalWebProjesi\\KurumsalWebProjesi\\Views\\Shared\\_AdminLayout.cshtml",
-              "RelativeDocumentMoniker": "KurumsalWebProjesi\\Views\\Shared\\_AdminLayout.cshtml",
-              "ToolTip": "C:\\Users\\bahta\\Documents\\Bireysel_Gelistirilenler\\Web Projesi\\KurumsalWebProjesi\\KurumsalWebProjesi\\Views\\Shared\\_AdminLayout.cshtml",
-              "RelativeToolTip": "KurumsalWebProjesi\\Views\\Shared\\_AdminLayout.cshtml",
-              "ViewState": "AgIAAI8AAAAAAAAAAAAwwKIAAAAaAAAAAAAAAA==",
+              "DocumentIndex": 9,
+              "Title": "Hakkimizda.cshtml",
+              "DocumentMoniker": "C:\\Users\\bahta\\Documents\\Bireysel_Gelistirilenler\\Web Projesi\\KurumsalWebProjesi\\KurumsalWebProjesi\\Views\\Home\\Hakkimizda.cshtml",
+              "RelativeDocumentMoniker": "KurumsalWebProjesi\\Views\\Home\\Hakkimizda.cshtml",
+              "ToolTip": "C:\\Users\\bahta\\Documents\\Bireysel_Gelistirilenler\\Web Projesi\\KurumsalWebProjesi\\KurumsalWebProjesi\\Views\\Home\\Hakkimizda.cshtml",
+              "RelativeToolTip": "KurumsalWebProjesi\\Views\\Home\\Hakkimizda.cshtml",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAADsAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-18T14:05:56.57Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "C:\\Users\\bahta\\Documents\\Bireysel_Gelistirilenler\\Web Projesi\\KurumsalWebProjesi\\KurumsalWebProjesi\\Views\\Hizmet\\Edit.cshtml",
-              "RelativeDocumentMoniker": "KurumsalWebProjesi\\Views\\Hizmet\\Edit.cshtml",
-              "ToolTip": "C:\\Users\\bahta\\Documents\\Bireysel_Gelistirilenler\\Web Projesi\\KurumsalWebProjesi\\KurumsalWebProjesi\\Views\\Hizmet\\Edit.cshtml",
-              "RelativeToolTip": "KurumsalWebProjesi\\Views\\Hizmet\\Edit.cshtml",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAACkAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-18T13:56:09.48Z",
+              "WhenOpened": "2025-05-18T20:12:25.904Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\bahta\\Documents\\Bireysel_Gelistirilenler\\Web Projesi\\KurumsalWebProjesi\\KurumsalWebProjesi\\Views\\Hizmet\\Create.cshtml",
-              "RelativeDocumentMoniker": "KurumsalWebProjesi\\Views\\Hizmet\\Create.cshtml",
-              "ToolTip": "C:\\Users\\bahta\\Documents\\Bireysel_Gelistirilenler\\Web Projesi\\KurumsalWebProjesi\\KurumsalWebProjesi\\Views\\Hizmet\\Create.cshtml",
-              "RelativeToolTip": "KurumsalWebProjesi\\Views\\Hizmet\\Create.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "FooterPartial.cshtml",
+              "DocumentMoniker": "C:\\Users\\bahta\\Documents\\Bireysel_Gelistirilenler\\Web Projesi\\KurumsalWebProjesi\\KurumsalWebProjesi\\Views\\Home\\FooterPartial.cshtml",
+              "RelativeDocumentMoniker": "KurumsalWebProjesi\\Views\\Home\\FooterPartial.cshtml",
+              "ToolTip": "C:\\Users\\bahta\\Documents\\Bireysel_Gelistirilenler\\Web Projesi\\KurumsalWebProjesi\\KurumsalWebProjesi\\Views\\Home\\FooterPartial.cshtml",
+              "RelativeToolTip": "KurumsalWebProjesi\\Views\\Home\\FooterPartial.cshtml",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-18T13:56:04.707Z",
+              "WhenOpened": "2025-05-18T20:11:45.836Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Blog.cshtml",
+              "DocumentMoniker": "C:\\Users\\bahta\\Documents\\Bireysel_Gelistirilenler\\Web Projesi\\KurumsalWebProjesi\\KurumsalWebProjesi\\Views\\Home\\Blog.cshtml",
+              "RelativeDocumentMoniker": "KurumsalWebProjesi\\Views\\Home\\Blog.cshtml",
+              "ToolTip": "C:\\Users\\bahta\\Documents\\Bireysel_Gelistirilenler\\Web Projesi\\KurumsalWebProjesi\\KurumsalWebProjesi\\Views\\Home\\Blog.cshtml",
+              "RelativeToolTip": "KurumsalWebProjesi\\Views\\Home\\Blog.cshtml",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAACQAAABuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-18T20:05:12.412Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\bahta\\Documents\\Bireysel_Gelistirilenler\\Web Projesi\\KurumsalWebProjesi\\KurumsalWebProjesi\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "KurumsalWebProjesi\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\bahta\\Documents\\Bireysel_Gelistirilenler\\Web Projesi\\KurumsalWebProjesi\\KurumsalWebProjesi\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "KurumsalWebProjesi\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAAB0AAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-18T19:59:52.122Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "BlogDetay.cshtml",
+              "DocumentMoniker": "C:\\Users\\bahta\\Documents\\Bireysel_Gelistirilenler\\Web Projesi\\KurumsalWebProjesi\\KurumsalWebProjesi\\Views\\Home\\BlogDetay.cshtml",
+              "RelativeDocumentMoniker": "KurumsalWebProjesi\\Views\\Home\\BlogDetay.cshtml",
+              "ToolTip": "C:\\Users\\bahta\\Documents\\Bireysel_Gelistirilenler\\Web Projesi\\KurumsalWebProjesi\\KurumsalWebProjesi\\Views\\Home\\BlogDetay.cshtml",
+              "RelativeToolTip": "KurumsalWebProjesi\\Views\\Home\\BlogDetay.cshtml",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAAB0AAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-18T19:59:32.124Z",
               "EditorCaption": ""
             }
           ]
@@ -194,6 +199,39 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "FloatingWindowState": {
+        "Id": "623df95d-48f0-4440-985f-fae3932870bc",
+        "Display": 1,
+        "X": 217,
+        "Y": 0,
+        "Width": 1154,
+        "Height": 725,
+        "WindowState": 2
+      },
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Labels.resx",
+              "DocumentMoniker": "C:\\Users\\bahta\\Documents\\Bireysel_Gelistirilenler\\Web Projesi\\KurumsalWebProjesi\\KurumsalWebProjesi\\App_GlobalResources\\Labels.resx",
+              "RelativeDocumentMoniker": "KurumsalWebProjesi\\App_GlobalResources\\Labels.resx",
+              "ToolTip": "C:\\Users\\bahta\\Documents\\Bireysel_Gelistirilenler\\Web Projesi\\KurumsalWebProjesi\\KurumsalWebProjesi\\App_GlobalResources\\Labels.resx",
+              "RelativeToolTip": "KurumsalWebProjesi\\App_GlobalResources\\Labels.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2025-05-18T19:50:05.455Z",
+              "EditorCaption": ""
             }
           ]
         }

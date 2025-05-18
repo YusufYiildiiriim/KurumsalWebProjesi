@@ -42,7 +42,7 @@
                         <h2 class="title">
                             <a href="/BlogPost/@SeoHelper.ToSeoUrl(item.Baslik).ToLower()-@item.BlogId">@item.Baslik</a>
                         </h2>
-                        <a class="btn-get-started" href="/BlogPost/@SeoHelper.ToSeoUrl(item.Baslik).ToLower()-@item.BlogId">Devamını Oku</a>
+                        <a class="btn-get-started" href="/BlogPost/@SeoHelper.ToSeoUrl(item.Baslik).ToLower()-@item.BlogId">@(HttpContext.GetGlobalResourceObject("Labels", "Blog_devamini_oku"))</a>
                         <br />
                         <br />
                         @*<p class="post-category">@item.Icerik</p>*@

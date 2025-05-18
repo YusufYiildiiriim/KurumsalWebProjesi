@@ -46,14 +46,40 @@
                 <h1 class="sitename">@*Kurumsal Web*@ <img src="~/@ViewBag.Kimlik.LogoURL" alt="Alternate Text" /> @ViewBag.Kimlik.Unvan </h1>
             </a>
 
-            <nav id="navmenu" class="navmenu" >
+            <nav id="navmenu" class="navmenu">
                 <ul>
-                    <li><a href="/Anasayfa" class="active">Ana Sayfa</a></li>
-                    <li><a href="/Hakkimizda">Hakkımızda</a></li>
-                    <li><a href="/BlogPost">Blog</a></li>
-                    <li><a href="/Iletisim">İletişim</a></li>
-                    <li><a href="/Hizmet">Hizmetler</a></li>
+                    <li><a href="/Anasayfa" class="active">@(HttpContext.GetGlobalResourceObject("Labels", "Home_navmenu_AnaSayfa"))</a></li>
+                    <li><a href="/Hakkimizda">@(HttpContext.GetGlobalResourceObject("Labels", "Hakkimizda_Hakkimizda"))</a></li>
+                    <li><a href="/BlogPost">@(HttpContext.GetGlobalResourceObject("Labels", "Home_navmenu_Blog"))</a></li>
+                    <li><a href="/Iletisim">@(HttpContext.GetGlobalResourceObject("Labels", "Home_navmenu_Iletisim"))</a></li>
+                    <li><a href="/Hizmet">@(HttpContext.GetGlobalResourceObject("Labels", "Home_navmenu_Hizmetler"))</a></li>
+                    <li>
+                        <form action="@Url.Action("ChangeLanguage", "Home")" method="get" style="display:inline;" class="navmenu" aria-labelledby="navbarDropdownMenuLink">
+                            <select name="lang" onchange="this.form.submit()">
+                                <option class="navmenu" value="tr" @(System.Threading.Thread.CurrentThread.CurrentUICulture.Name == "tr" ? "selected" : "")>Türkçe</option>
+                                <option class="navmenu" value="en" @(System.Threading.Thread.CurrentThread.CurrentUICulture.Name.StartsWith("en") ? "selected" : "")>English</option>
+                                <option class="navmenu" value="de" @(System.Threading.Thread.CurrentThread.CurrentUICulture.Name.StartsWith("de") ? "selected" : "")>Deucths</option>
+                            </select>
+                        </form>
+                    </li>
+                @*<li>
+                    <div id="google_translate_element"></div>
+                    <script type="text/javascript">
+                        function googleTranslateElementInit() {
+                            new google.translate.TranslateElement({
+                                pageLanguage: 'tr',
+                                includedLanguages: 'en,tr,de',
+                                layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+                                autoDisplay: false
+                            }, 'google_translate_element');
+                        }
+                    </script>
+                    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+                </li>*@
+
                 </ul>
+                
+                
                 <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
             </nav>
 
