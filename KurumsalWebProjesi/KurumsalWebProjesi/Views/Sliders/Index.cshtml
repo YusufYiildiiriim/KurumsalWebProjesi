@@ -8,7 +8,7 @@
 <h2>Slider</h2>
 
 <p>
-    @Html.ActionLink("Yeni Slider Ekle", "Create")
+    <a class="btn btn-dark" href="/Sliders/Create">Yeni Slider Ekle</a>
 </p>
 <table class="table">
     <tr>
@@ -19,8 +19,12 @@
             @Html.DisplayNameFor(model => model.Aciklama)
         </th>
         <th>
+           Slider Dili
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.ResimURL)
         </th>
+
         <th></th>
     </tr>
 
@@ -33,12 +37,15 @@
             @Html.DisplayFor(modelItem => item.Aciklama)
         </td>
         <td>
-            <img src="~/@item.ResimURL"  width="150" height="50" />
+            @Html.DisplayFor(modelItem => item.Languages.Language)
         </td>
         <td>
-            @Html.ActionLink("Düzenle", "Edit", new { id=item.SliderId }) |
-            @Html.ActionLink("Detaylar", "Details", new { id=item.SliderId }) |
-            @Html.ActionLink("Sil", "Delete", new { id=item.SliderId })
+            <img src="~/@item.ResimURL" width="150" height="50" />
+        </td>
+        <td>
+            @Html.ActionLink("Düzenle", "Edit", new { id = item.SliderId }) |
+            @*@Html.ActionLink("Detaylar", "Details", new { id = item.SliderId }) |*@
+            @Html.ActionLink("Sil", "Delete", new { id = item.SliderId })
         </td>
     </tr>
 }

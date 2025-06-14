@@ -17,16 +17,19 @@ namespace KurumsalWebProjesi.Controllers
         // GET: Hizmet
         public ActionResult Index()
         {
+            var languages = db.Languages.ToList();
             return View(db.Hizmet.ToList());
         }
         public ActionResult Create()
         {
+            ViewBag.LanguagesId = new SelectList(db.Languages, "Id", "Language");
             return View();
         }
         [HttpPost]
         [ValidateInput(false)]
         public ActionResult Create(Hizmet hizmet,HttpPostedFileBase ResimURL)
         {
+            ViewBag.LanguagesId = new SelectList(db.Languages, "Id", "Language", hizmet.LanguagesId);
             if (ModelState.IsValid)
             {
                 if (ResimURL != null)
@@ -46,54 +49,50 @@ namespace KurumsalWebProjesi.Controllers
             }
             return View(hizmet);
         }
-        public ActionResult Edit(int? id)
+        public ActionResult Edit(int id)
         {
-            if (id == null)
-            {
-                ViewBag.Uyari = "Güncellenecek hizmet bulunamadı";
-            }
-            var hizmet = db.Hizmet.Find(id);
-            if (hizmet == null)
-            {
-                return HttpNotFound();
-            }
+
+            var hizmet = db.Hizmet.Where(x => x.HizmetId == id).SingleOrDefault();
+            ViewBag.LanguagesId = new SelectList(db.Languages.ToList(), "Id", "Language", hizmet.LanguagesId);
             return View(hizmet);
         }
+
+        // POST: Kimlik/Edit/5
         [HttpPost]
+        [ValidateAntiForgeryToken]
         [ValidateInput(false)]
-        public ActionResult Edit(int? id,Hizmet Hizmet,HttpPostedFileBase ResimUrl)
+       public ActionResult Edit(int id, Hizmet hizmet, HttpPostedFileBase ResimURL)
         {
-            
+            ViewBag.LanguagesId = new SelectList(db.Languages, "Id", "Language", hizmet.LanguagesId);
             if (ModelState.IsValid)
             {
                 var h = db.Hizmet.Where(x => x.HizmetId == id).SingleOrDefault();
-                if (ResimUrl != null)
+                if (ResimURL != null)
                 {
-            
                     if (System.IO.File.Exists(Server.MapPath(h.ResimURL)))
                     {
                         System.IO.File.Delete(Server.MapPath(h.ResimURL));
                     }
-                    WebImage img = new WebImage(ResimUrl.InputStream);
-                    FileInfo imginfo = new FileInfo(ResimUrl.FileName);
-
-                    string HizmetName = Guid.NewGuid().ToString() + imginfo.Extension;
+                    WebImage img = new WebImage(ResimURL.InputStream);
+                    FileInfo imginfo = new FileInfo(ResimURL.FileName);
+                    string logoname = Guid.NewGuid().ToString() + imginfo.Extension;
                     img.Resize(500, 500);
-                    img.Save("~/Uploads/Hizmet/" + HizmetName);
-
-                    h.ResimURL = "Uploads/Hizmet/" + HizmetName;
-             
+                    img.Save("~/Uploads/Hizmet/" + logoname);
+                    h.ResimURL = "Uploads/Hizmet/" + logoname;
                 }
-
-
-                h.Baslik = Hizmet.Baslik;
-                h.Aciklama = Hizmet.Aciklama;
+                h.Baslik = hizmet.Baslik;
+                h.Aciklama = hizmet.Aciklama;
+                h.LanguagesId = hizmet.LanguagesId;
                 db.SaveChanges();
                 return RedirectToAction("Index");
-
             }
-            return View();
+            return View(hizmet);
         }
+
+
+
+
+
         public ActionResult Delete(int id)
         {
             if (id == null)

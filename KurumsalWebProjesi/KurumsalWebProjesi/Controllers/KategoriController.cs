@@ -18,7 +18,9 @@ namespace KurumsalWebProjesi.Controllers
         // GET: Kategori
         public ActionResult Index()
         {
-            return View(db.Kategori.ToList());
+            var languagelist = db.Languages.ToList();
+            var kategorilist = db.Kategori.Include("Languages").ToList();
+            return View(kategorilist);
         }
 
         // GET: Kategori/Details/5
@@ -39,6 +41,7 @@ namespace KurumsalWebProjesi.Controllers
         // GET: Kategori/Create
         public ActionResult Create()
         {
+            ViewBag.LanguagesId = new SelectList(db.Languages, "Id", "Language");
             return View();
         }
 
@@ -47,8 +50,9 @@ namespace KurumsalWebProjesi.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "KategoriId,KategoriAd,Aciklama,txtsinav")] Kategori kategori)
+        public ActionResult Create([Bind(Include = "KategoriId,KategoriAd,Aciklama,txtsinav,LanguagesId")] Kategori kategori)
         {
+          
             if (ModelState.IsValid)
             {
                 db.Kategori.Add(kategori);
@@ -62,6 +66,8 @@ namespace KurumsalWebProjesi.Controllers
         // GET: Kategori/Edit/5
         public ActionResult Edit(int? id)
         {
+            ViewBag.LanguagesId = new SelectList(db.Languages, "Id", "Language");
+
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -79,8 +85,10 @@ namespace KurumsalWebProjesi.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "KategoriId,KategoriAd,Aciklama,txtsinav")] Kategori kategori)
+        public ActionResult Edit([Bind(Include = "KategoriId,KategoriAd,Aciklama,txtsinav,LanguagesId")] Kategori kategori)
         {
+            ViewBag.LanguagesId = new SelectList(db.Languages, "Id", "Language");
+
             if (ModelState.IsValid)
             {
                 db.Entry(kategori).State = EntityState.Modified;

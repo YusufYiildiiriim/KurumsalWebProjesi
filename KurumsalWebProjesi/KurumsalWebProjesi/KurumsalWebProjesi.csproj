@@ -1326,6 +1326,7 @@
     <Compile Include="Controllers\IletisimController.cs" />
     <Compile Include="Controllers\KategoriController.cs" />
     <Compile Include="Controllers\KimlikController.cs" />
+    <Compile Include="Controllers\LanguagesController.cs" />
     <Compile Include="Controllers\SlidersController.cs" />
     <Compile Include="Controllers\YorumController.cs" />
     <Compile Include="Global.asax.cs">
@@ -1341,6 +1342,7 @@
     <Compile Include="Models\Model\Iletisim.cs" />
     <Compile Include="Models\Model\Kategori.cs" />
     <Compile Include="Models\Model\Kimlik.cs" />
+    <Compile Include="Models\Model\Languages.cs" />
     <Compile Include="Models\Model\Slider.cs" />
     <Compile Include="Models\Model\Yorum.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -1386,7 +1388,6 @@
     <Content Include="Views\Iletisim\Index.cshtml" />
     <Content Include="Views\Hizmet\Index.cshtml" />
     <Content Include="Views\Hizmet\Create.cshtml" />
-    <Content Include="Views\Hizmet\Edit.cshtml" />
     <Content Include="Views\Kategori\Delete.cshtml" />
     <Content Include="Views\Kategori\Details.cshtml" />
     <Content Include="Views\Kategori\Edit.cshtml" />
@@ -1408,7 +1409,6 @@
     <Content Include="Views\Home\Blog.cshtml" />
     <Content Include="Views\Home\BlogKategoriPartial.cshtml" />
     <Content Include="Views\Home\BlogDetay.cshtml" />
-    <Content Include="Views\Hakkimizda\Add.cshtml" />
     <Content Include="Views\Kategori\Create.cshtml" />
     <Content Include="Views\Yorum\Create.cshtml" />
     <Content Include="Views\Yorum\Delete.cshtml" />
@@ -1419,6 +1419,12 @@
     <Content Include="Views\Admin\Create.cshtml" />
     <Content Include="Views\Admin\Edit.cshtml" />
     <Content Include="Views\Admin\SifremiUnuttum.cshtml" />
+    <Content Include="Views\Hakkimizda\Create.cshtml" />
+    <Content Include="Views\Hizmet\Edit.cshtml" />
+    <Content Include="Views\Kimlik\Create.cshtml" />
+    <Content Include="Views\Languages\Create.cshtml" />
+    <Content Include="Views\Languages\Details.cshtml" />
+    <Content Include="Views\Languages\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

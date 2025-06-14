@@ -26,6 +26,9 @@ namespace KurumsalWebProjesi.Models.Model
         public string LogoURL { get; set; }
         [DisplayName("Site Unvan")]
         public string Unvan { get; set; }
+        public int? LanguagesId { get; set; }
+
+        public Languages Languages { get; set; }
 
     }
 }

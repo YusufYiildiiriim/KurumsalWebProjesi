@@ -16,6 +16,9 @@ namespace KurumsalWebProjesi.Models.Model
         public string KategoriAd { get; set; }
         public string Aciklama{ get; set; }
         public string txtsinav { get; set; }
+        public int? LanguagesId { get; set; }
+
+        public Languages Languages { get; set; }
         public ICollection<Blog>  Blogs { get; set; }
 
     }

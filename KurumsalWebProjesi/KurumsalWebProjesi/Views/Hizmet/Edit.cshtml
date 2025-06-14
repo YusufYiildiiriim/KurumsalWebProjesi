@@ -1,50 +1,67 @@
 ﻿@model KurumsalWebProjesi.Models.Model.Hizmet
+
 @{
     ViewBag.Title = "Edit";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
-<h2>Hizmet Düzenle</h2>
-<div class="form">
-    <form class="form-validate form-horizontal" id="feedback_form" method="post" action="/Hizmet/Edit/@Model.HizmetId" enctype="multipart/form-data">
-        <div class="form-group">
-            <label for="cname" class="control-label col-lg-2">Başlık <span class="required"></span> </label>
-            <div class="col-lg-10">
-                <input class="form-control" id="Baslik" name="Baslik" type="text" required value="@Model.Baslik" />
-            </div>
-        </div>
-        <div class="form-group">
-            <label for="cname" class="control-label col-lg-2">Açıklama <span class="required"></span> </label>
-            <div class="col-lg-10">
-                <textarea name="Aciklama" required class="ckeditor">@Model.Aciklama</textarea>
-            </div>
-        </div>
-        <div class="form-group">
-            <label for="cname" class="control-label col-lg-2">Önceki Resim <span class="required"></span> </label>
-            <div class="col-lg-10">
-                <img src="~/@Model.ResimURL" width="150" height="150" alt="Alternate Text" />
-            </div>
-        </div>
-        <div class="form-group">
-            <label for="cname" class="control-label col-lg-2">Resim URL <span class="required"></span> </label>
-            <div class="col-lg-10">
-                <input type="file" class="form-control" name="ResimURL" accept=".jpg,.png,.jpeg" required />
-            </div>
-        </div>
-        <br />
-        <br />
-        <div class="form-group">
-            <div class="col-lg-offset-2 col-lg-10">
-                <button class="btn btn-primary" type="submit">  <a href="/Hizmet/Index">Kaydet</a> </button>
-                <br />
-                <a class="btn btn-default" href="/Hizmet/Index">İptal</a>
-            </div>
-        </div>
+<h2>Edit</h2>
 
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+<div class="form-horizontal">
+    <h4>Hizmet</h4>
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    @Html.HiddenFor(model => model.HizmetId)
 
+    <div class="form-group">
+        @Html.LabelFor(model => model.Baslik, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.Baslik, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Baslik, "", new { @class = "text-danger" })
+        </div>
+    </div>
 
-    </form>
+    <div class="form-group">
+        @Html.LabelFor(model => model.Aciklama, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.Aciklama, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Aciklama, "", new { @class = "text-danger" })
+        </div>
+    </div>
 
+    <div class="form-group">
+        <label for="cname" class="control-label col-lg-2"> Önceki Resim<span class="required"></span></label>
+        <div class="col-md-10">
+            <img src="~/@Model.ResimURL" alt="Alternate Text" />
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="cname" class="control-label col-lg-2"> Resim<span class="required"></span></label>
+        <div class="col-md-10">
+            <input class="form-control" type="file" name="ResimURL" accept=".jgp,.png,.jpeg" />
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.LanguagesId, "LanguagesId", htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.DropDownList("LanguagesId", null, htmlAttributes: new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.LanguagesId, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Save" class="btn btn-default" />
+        </div>
+    </div>
 </div>
+}
 
-
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

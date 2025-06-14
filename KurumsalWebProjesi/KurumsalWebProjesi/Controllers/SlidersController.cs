@@ -21,17 +21,22 @@ namespace KurumsalWebProjesi.Controllers
         // GET: Sliders
         public ActionResult Index()
         {
-            return View(db.Slider.ToList());
+            var languages = db.Languages.ToList();
+            var Slider = db.Slider.ToList();
+
+            return View(Slider);
         }
 
         // GET: Sliders/Details/5
         public ActionResult Details(int? id)
         {
+           
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             Slider slider = db.Slider.Find(id);
+            ViewBag.LanguagesId = new SelectList(db.Languages, "Id", "Language",slider.LanguagesId);
             if (slider == null)
             {
                 return HttpNotFound();
@@ -42,6 +47,7 @@ namespace KurumsalWebProjesi.Controllers
         // GET: Sliders/Create
         public ActionResult Create()
         {
+            ViewBag.LanguagesId = new SelectList(db.Languages, "Id", "Language");
             return View();
         }
 
@@ -50,8 +56,10 @@ namespace KurumsalWebProjesi.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "SliderId,Baslik,Aciklama,ResimURL")] Slider slider,HttpPostedFileBase ResimURL)
+        public ActionResult Create([Bind(Include = "SliderId,Baslik,Aciklama,ResimURL,LanguagesId")] Slider slider,HttpPostedFileBase ResimURL)
         {
+
+            ViewBag.LanguagesId = new SelectList(db.Languages, "Id", "Language", slider.LanguagesId);
             if (ModelState.IsValid)
             {
                 if (ResimURL != null)
@@ -66,23 +74,26 @@ namespace KurumsalWebProjesi.Controllers
 
                     slider.ResimURL = "Uploads/Slider/" + Sliderimgname;
                 }
-
+ 
                 db.Slider.Add(slider);
                 db.SaveChanges();
+       
                 return RedirectToAction("Index");
             }
-
+          
             return View(slider);
         }
 
         // GET: Sliders/Edit/5
         public ActionResult Edit(int? id)
         {
+           
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             Slider slider = db.Slider.Find(id);
+            ViewBag.LanguagesId = new SelectList(db.Languages, "Id", "Language", slider.LanguagesId);
             if (slider == null)
             {
                 return HttpNotFound();
@@ -95,8 +106,9 @@ namespace KurumsalWebProjesi.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "SliderId,Baslik,Aciklama,ResimURL")] Slider slider ,HttpPostedFileBase ResimUrl,int id)
+        public ActionResult Edit([Bind(Include = "SliderId,Baslik,Aciklama,ResimURL,LanguagesId")] Slider slider ,HttpPostedFileBase ResimUrl,int id)
         {
+           
             if (ModelState.IsValid)
             {
                 var s = db.Slider.Where(x => x.SliderId == id).SingleOrDefault();
@@ -111,16 +123,17 @@ namespace KurumsalWebProjesi.Controllers
                     WebImage img = new WebImage(ResimUrl.InputStream);
                     FileInfo imginfo = new FileInfo(ResimUrl.FileName);
 
-                    string sliderimgname = Guid.NewGuid().ToString() + imginfo.Extension;
-                    img.Resize(1024, 360);
-                    img.Save("~/Uploads/Slider/" + sliderimgname);
+                    string Blogimgname = Guid.NewGuid().ToString() + imginfo.Extension;
+                    img.Resize(600, 400);
+                    img.Save("~/Uploads/Blog/" + Blogimgname);
 
-                    s.ResimURL = "Uploads/Slider/" + sliderimgname;
+                    s.ResimURL = "Uploads/Blog/" + Blogimgname;
 
                 }
 
                 s.Baslik = slider.Baslik;
                 s.Aciklama = slider.Aciklama;
+                s.LanguagesId = slider.LanguagesId;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }

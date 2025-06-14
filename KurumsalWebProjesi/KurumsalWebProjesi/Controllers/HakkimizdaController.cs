@@ -14,54 +14,83 @@ namespace KurumsalWebProjesi.Controllers
         // GET: Hakkimizda
         public ActionResult Index()
         {
-            var h = db.Hakkimizda.ToList();
-            return View(h);
+            var hakkimizdalist = db.Hakkimizda.ToList();
+            var diller = db.Languages.ToList();
+
+           
+            return View(hakkimizdalist);
         }
 
         public ActionResult Edit(int id)
         {
-            var h = db.Hakkimizda.Where(x => x.HakiimizdaId == id).SingleOrDefault();
-            return View(h);
+            var hakkimizda = db.Hakkimizda.Find(id);
+            ViewBag.LanguagesId = new SelectList(db.Languages, "Id", "Language",hakkimizda.LanguagesId);
+            return View(hakkimizda);
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
         [ValidateInput(false)]
         public ActionResult Edit(int id, Hakkimizda h)
         {
+            ViewBag.LanguagesId = new SelectList(db.Languages, "Id", "Language", h.LanguagesId);
             if (ModelState.IsValid)
             {
                 var hakkimizda = db.Hakkimizda.Where(x => x.HakiimizdaId == id).SingleOrDefault();
                 hakkimizda.Aciklama = h.Aciklama;
+                hakkimizda.LanguagesId = h.LanguagesId;
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                //return RedirectToAction("Index");
+                return RedirectToAction("Index", "Hakkimizda");
             }
-            
+          
+
             return View(h);
         }
         [HttpGet]
-        public ActionResult Add()
+        public ActionResult Create()
         {
+            ViewBag.LanguagesId = new SelectList(db.Languages, "Id", "Language");
             return View();
         }
 
         [HttpPost]
         [ValidateInput(false)]
-        public ActionResult Add(string HakkimizdaAciklama)
+        //public ActionResult Create(string HakkimizdaAciklama,int LanguageId)
+        //{
+            
+        //    if (!string.IsNullOrWhiteSpace(HakkimizdaAciklama))
+        //    {
+        //        db.Hakkimizda.Add(new Hakkimizda()
+        //        {
+        //            Aciklama = HakkimizdaAciklama,
+        //            LanguagesId = LanguageId
+
+        //        });
+        //        db.SaveChanges();
+        //        return RedirectToAction("Index");
+        //    }
+
+        //    return View(); 
+        //}
+        public ActionResult Create(Hakkimizda h)
         {
-            if (!string.IsNullOrWhiteSpace(HakkimizdaAciklama))
+            ViewBag.LanguagesId = new SelectList(db.Languages, "Id", "Language",h.LanguagesId);
+            if (ModelState.IsValid)
             {
-                db.Hakkimizda.Add(new Hakkimizda()
-                {
-                    Aciklama = HakkimizdaAciklama
-                });
+                db.Hakkimizda.Add(h);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-
-            return View(); 
+            return View(h);
         }
-
-
+    
+        public ActionResult Delete(int id)
+        {
+            var hakkimizda = db.Hakkimizda.Find(id);
+            db.Hakkimizda.Remove(hakkimizda);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
 
     }
 }

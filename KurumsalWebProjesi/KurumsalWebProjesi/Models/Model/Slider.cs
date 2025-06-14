@@ -21,6 +21,9 @@ namespace KurumsalWebProjesi.Models.Model
         [DisplayName("Slider Resim"), StringLength(250)]
 
         public string ResimURL { get; set; }
+        public int? LanguagesId { get; set; }
+
+        public Languages Languages { get; set; }
 
     }
 }

@@ -49,16 +49,15 @@
             <nav id="navmenu" class="navmenu">
                 <ul>
                     <li><a href="/Anasayfa" class="active">@(HttpContext.GetGlobalResourceObject("Labels", "Home_navmenu_AnaSayfa"))</a></li>
-                    <li><a href="/Hakkimizda">@(HttpContext.GetGlobalResourceObject("Labels", "Hakkimizda_Hakkimizda"))</a></li>
+                    <li><a href="/HakkimizdaDetay">@(HttpContext.GetGlobalResourceObject("Labels", "Hakkimizda_Hakkimizda"))</a></li>
                     <li><a href="/BlogPost">@(HttpContext.GetGlobalResourceObject("Labels", "Home_navmenu_Blog"))</a></li>
                     <li><a href="/Iletisim">@(HttpContext.GetGlobalResourceObject("Labels", "Home_navmenu_Iletisim"))</a></li>
-                    <li><a href="/Hizmet">@(HttpContext.GetGlobalResourceObject("Labels", "Home_navmenu_Hizmetler"))</a></li>
+                    <li><a href="/Hizmetlerimiz">@(HttpContext.GetGlobalResourceObject("Labels", "Home_navmenu_Hizmetler"))</a></li>
                     <li>
-                        <form action="@Url.Action("ChangeLanguage", "Home")" method="get" style="display:inline;" class="navmenu" aria-labelledby="navbarDropdownMenuLink">
+                        <form method="get" action="@Url.Action("Index", "Home")">
                             <select name="lang" onchange="this.form.submit()">
-                                <option class="navmenu" value="tr" @(System.Threading.Thread.CurrentThread.CurrentUICulture.Name == "tr" ? "selected" : "")>Türkçe</option>
-                                <option class="navmenu" value="en" @(System.Threading.Thread.CurrentThread.CurrentUICulture.Name.StartsWith("en") ? "selected" : "")>English</option>
-                                <option class="navmenu" value="de" @(System.Threading.Thread.CurrentThread.CurrentUICulture.Name.StartsWith("de") ? "selected" : "")>Deucths</option>
+                                <option value="tr" @(Request.QueryString["lang"] == "tr" ? "selected" : "")>Türkçe</option>
+                                <option value="en" @(Request.QueryString["lang"] == "en" ? "selected" : "")>English</option>
                             </select>
                         </form>
                     </li>

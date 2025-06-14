@@ -4,12 +4,15 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
-@*<a href="/Hakkimizda/Add">Yeni Ekle</a>*@
+<a class="btn btn-dark" href="/Hakkimizda/Create">Yeni Ekle</a>
 
 <table class="table">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.Aciklama)
+        </th>
+        <th>
+            Kimlik Dili
         </th>
         <th></th>
     </tr>
@@ -21,8 +24,14 @@
                 @Html.Raw(item.Aciklama)
             </td>
             <td>
+                @Html.DisplayFor(modelItem => item.Languages.Language)
+            </td>
+            <td>
                 @Html.ActionLink("Güncelleme", "Edit", new { id = item.HakiimizdaId })
             </td>
+            <td>
+            <td><a href="/Hakkimizda/Delete/@item.HakiimizdaId">Sil</a> </td>
+         
         </tr>
     }
 

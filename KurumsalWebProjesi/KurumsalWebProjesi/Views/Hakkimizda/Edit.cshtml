@@ -15,26 +15,34 @@
 {
     @Html.AntiForgeryToken()
 
-    <div class="form-horizontal">
-        <h4>Hakkimizda</h4>
-        <hr />
-        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        @Html.HiddenFor(model => model.HakiimizdaId)
+<div class="form-horizontal">
+    <h4>Hakkimizda</h4>
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    @Html.HiddenFor(model => model.HakiimizdaId)
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.Aciklama, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                <textarea name="Aciklama" class="ckeditor">@Model.Aciklama</textarea>
-                @Html.ValidationMessageFor(model => model.Aciklama, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Güncelle" class="btn btn-default" />
-            </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.Aciklama, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            <textarea name="Aciklama" class="ckeditor">@Model.Aciklama</textarea>
+            @Html.ValidationMessageFor(model => model.Aciklama, "", new { @class = "text-danger" })
         </div>
     </div>
+    <div class="form-group">
+        <label for="cname" class="control-label col-lg-2"> Hakkımızda Dili<span class="required"></span></label>
+        <div class="col-md-10">
+            @Html.DropDownList("LanguagesId", null, new { @class = "form-control" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+
+            <input type="submit" value="submit" class="btn btn-default" />
+
+        </div>
+    </div>
+</div>
 }
 
 <div>

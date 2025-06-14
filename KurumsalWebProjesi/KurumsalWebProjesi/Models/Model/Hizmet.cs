@@ -20,5 +20,8 @@ namespace KurumsalWebProjesi.Models.Model
         public string Aciklama  { get; set; }
         [DisplayName("hizmet Resim")]
         public string ResimURL{ get; set; }
+        public int? LanguagesId { get; set; }
+
+        public Languages Languages { get; set; }
     }
 }

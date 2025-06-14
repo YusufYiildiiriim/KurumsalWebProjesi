@@ -6,5 +6,5 @@
 
 @foreach (var item in Model)
 {
-    <li><i ><a href="/Blog/@SeoHelper.ToSeoUrl(item.KategoriAd).ToLower()"</a> <span>Kategori Hakkında Yazılan Blog Sayısı(@item.Blogs.Count())</span></i></li>
+    <li><i ><a> href="/Blog/@SeoHelper.ToSeoUrl(item.KategoriAd).ToLower()"</a> <span>Kategori Hakkında Yazılan Blog Sayısı(@item.Blogs.Count())</span></i></li>
 }

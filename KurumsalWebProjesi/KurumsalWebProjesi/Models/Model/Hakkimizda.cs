@@ -16,6 +16,9 @@ namespace KurumsalWebProjesi.Models.Model
         [Required]
         [DisplayName("Hakkımızda Açıklama")]
         public string Aciklama { get; set; }
+        public int ?LanguagesId { get; set; }
+
+        public Languages Languages { get; set; }
 
     }
 }

@@ -21,7 +21,9 @@
         <th>
             @Html.DisplayNameFor(model => model.txtsinav)
         </th>
-        <th></th>
+        <th>
+            Kategori Dili
+        </th>
     </tr>
 
 @foreach (var item in Model) {
@@ -34,6 +36,9 @@
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.txtsinav)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Languages.Language)
         </td>
         <td>
             @Html.ActionLink("Düzenle", "Edit", new { id = item.KategoriId }) |

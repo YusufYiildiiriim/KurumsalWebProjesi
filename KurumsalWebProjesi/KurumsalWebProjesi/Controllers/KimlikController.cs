@@ -18,7 +18,11 @@ namespace KurumsalWebProjesi.Controllers
         public ActionResult Index()
         {
 
-            return View(db.Kimlik.ToList());
+            var kimlikList = db.Kimlik.ToList();
+            var diller = db.Languages.ToList();
+            
+
+            return View(kimlikList);
         }
 
 
@@ -28,7 +32,9 @@ namespace KurumsalWebProjesi.Controllers
         // GET: Kimlik/Edit/5
         public ActionResult Edit(int id)
         {
+           
             var kimlik = db.Kimlik.Where(x => x.KimlikId == id).SingleOrDefault();
+            ViewBag.LanguagesId = new SelectList(db.Languages.ToList(), "Id", "Language", kimlik.LanguagesId);
             return View(kimlik);
         }
 
@@ -36,8 +42,9 @@ namespace KurumsalWebProjesi.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         [ValidateInput(false)]
-        public ActionResult Edit(int id, Kimlik kimlik,HttpPostedFileBase LogoUrl)
+        public ActionResult Edit(int id, Kimlik kimlik, HttpPostedFileBase LogoUrl)
         {
+            ViewBag.LanguagesId = new SelectList(db.Languages, "Id", "Language", kimlik.LanguagesId);
             if (ModelState.IsValid)
             {
                 var k = db.Kimlik.Where(x => x.KimlikId == id).SingleOrDefault();
@@ -50,16 +57,17 @@ namespace KurumsalWebProjesi.Controllers
                     WebImage img = new WebImage(LogoUrl.InputStream);
                     FileInfo imginfo = new FileInfo(LogoUrl.FileName);
 
-                    string logoname = LogoUrl.FileName + imginfo.Extension;
-                    img.Resize(300, 200);
-                    img.Save("~/Uploads/Kimlik/"+logoname);
+                    string Blogimgname = Guid.NewGuid().ToString() + imginfo.Extension;
+                    img.Resize(600, 400);
+                    img.Save("~/Uploads/Blog/" + Blogimgname);
 
-                    k.LogoURL = "Uploads/Kimlik/" + logoname;
+                    k.LogoURL= "Uploads/Blog/" + Blogimgname;
                 }
                 k.Title = kimlik.Title;
                 k.Keywords = kimlik.Keywords;
                 k.Description = kimlik.Description;
                 k.Unvan = kimlik.Unvan;
+                k.LanguagesId = kimlik.LanguagesId;
 
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -68,13 +76,54 @@ namespace KurumsalWebProjesi.Controllers
 
             return View(kimlik);
         }
+        public ActionResult Create()
+        {
+            ViewBag.LanguagesId = new SelectList(db.Languages, "Id", "Language");
+            return View();
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        [ValidateInput(false)]
+        public ActionResult Create(Kimlik kimlik, HttpPostedFileBase LogoUrl)
+        {
+            ViewBag.LanguagesId = new SelectList(db.Languages, "Id", "Language", kimlik.LanguagesId);
+            if (ModelState.IsValid)
+            {
+                if (LogoUrl != null)
+                {
+                    WebImage img = new WebImage(LogoUrl.InputStream);
+                    FileInfo imginfo = new FileInfo(LogoUrl.FileName);
+                    string logoname = LogoUrl.FileName + imginfo.Extension;
+                    img.Resize(300, 200);
+                    img.Save("~/Uploads/Kimlik/" + logoname);
+                    kimlik.LogoURL = "Uploads/Kimlik/" + logoname;
+                }
+                db.Kimlik.Add(kimlik);
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return View(kimlik);
+
+        }
+        // GET: Kimlik/Delete/5
+        public ActionResult Delete(int id)
+        {
+            var Kimlik = db.Kimlik.Find(id);
+            if (Kimlik == null)
+            {
+                return HttpNotFound();
+            }
+            if (System.IO.File.Exists(Server.MapPath(Kimlik.LogoURL)))
+            {
+                System.IO.File.Delete(Server.MapPath(Kimlik.LogoURL));
+            }
+            db.Kimlik.Remove(Kimlik);
+            db.SaveChanges();
+
+            return RedirectToAction("Index");
+        }
 
 
-
-
-
-
-
-      
     }
+
 }

@@ -18,16 +18,30 @@
         <div class="form-group">
             <label for="cname" class="control-label col-lg-2"> Başlık<span class="required"></span></label>
             <div class="col-md-10">
-                <input class="form-control" id="Baslik" type="text" name="Baslik" required value="@Model.Baslik"/>
+                <input class="form-control" id="Baslik" type="text" name="Baslik" required value="@Model.Baslik" />
             </div>
         </div>
+
+        //kategori güncellemesi
         <div class="form-group">
             <label for="cname" class="control-label col-lg-2"> Kategori<span class="required"></span></label>
             <div class="col-md-10">
                 @Html.DropDownList("KategoriId", null, new { @class = "form-control" })
-               
+
             </div>
         </div>
+
+
+        //Dil güncellemesi
+        <div class="form-group">
+            <label for="cname" class="control-label col-lg-2"> Blog Dili<span class="required"></span></label>
+            <div class="col-md-10">
+                @Html.DropDownList("LanguagesId", null, new { @class = "form-control" })
+
+            </div>
+        </div>
+
+
         <div class="form-group">
             <label for="cname" class="control-label col-lg-2"> içerik <span class="required"></span></label>
             <div class="col-md-10">
@@ -42,7 +56,7 @@
             <div class="form-group">
                 <label for="cname" class="control-label col-lg-2"> Resim<span class="required"></span></label>
                 <div class="col-md-10">
-                    <input class="form-control" type="file" name="ResimURL"  accept=".jgp,.png,.jpeg" />
+                    <input class="form-control" type="file" name="ResimURL" accept=".jgp,.png,.jpeg" />
                 </div>
             </div>
             <div class="form-group">

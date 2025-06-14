@@ -5,7 +5,7 @@
 }
 
 <h2>Hizmetler</h2>
-<a class="btn btn-danger" href="/Hizmet/Create">Hİzmet Ekle</a>
+<a class="btn btn-dark" href="/Hizmet/Create">Hİzmet Ekle</a>
 <table class="table table-striped"> 
     <thead>
         <tr>
@@ -13,6 +13,7 @@
             <th>Başlık</th>
             <th>Açıklama</th>
             <th>ResimURL</th>
+            <th>Hizmet Dili</th>
             <th>İşlemler</th>
         </tr>
     </thead>
@@ -25,7 +26,11 @@
                 <td>@item.HizmetId</td>
                 <td>@item.Baslik</td>
                 <td>@Html.Raw(item.Aciklama)</td>
-                <td> <img src="~/@item.ResimURL"  width="300" height="200" alt="Alternate Text" /></td>
+                <td> <img src="~/@item.ResimURL" width="300" height="200" alt="Alternate Text" /></td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Languages.Language)
+                </td>
+                    
                 <td><a href="/Hizmet/Edit/@item.HizmetId">Düzenle</a> | <a href="/Hizmet/Delete/@item.HizmetId">Sil</a></td>
             </tr>
         }

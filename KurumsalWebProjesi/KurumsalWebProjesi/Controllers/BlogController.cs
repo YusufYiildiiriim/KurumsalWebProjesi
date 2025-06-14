@@ -17,12 +17,17 @@ namespace KurumsalWebProjesi.Controllers
         
         public ActionResult Index()
         {
+            var a = db.Blog.Include("Kategori").Include("Languages").ToList();
+            var b = db.Blog.Include("Kategori").ToList();
+
             db.Configuration.LazyLoadingEnabled = false;
-            return View(db.Blog.Include("Kategori"));
+            return View(a);
+            
         }
         public ActionResult Create()
         {
             ViewBag.KategoriId = new SelectList(db.Kategori, "KategoriId","KategoriAd");
+            ViewBag.LanguagesId = new SelectList(db.Languages, "Id","Language");
             return View();
         }
         [HttpPost]
@@ -67,6 +72,7 @@ namespace KurumsalWebProjesi.Controllers
                 return HttpNotFound();
             }
             ViewBag.KategoriId = new SelectList(db.Kategori, "KategoriId", "KategoriAd", b.KategoriId);
+            ViewBag.LanguagesId = new SelectList(db.Languages, "Id", "Language",b.LanguagesId);
             return View(b);
         }
         [HttpPost]
@@ -98,6 +104,7 @@ namespace KurumsalWebProjesi.Controllers
                 b.Baslik = blog.Baslik;
                 b.Icerik = blog.Icerik;
                 b.kategori = blog.kategori;
+                b.LanguagesId = blog.LanguagesId;
                 db.SaveChanges();
                 return RedirectToAction("Index");
 

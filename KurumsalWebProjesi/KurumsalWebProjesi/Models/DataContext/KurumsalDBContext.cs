@@ -11,6 +11,7 @@ namespace KurumsalWebProjesi.Models.DataContext
 	{
         public KurumsalDBContext():base("KurumsalWebDB")
         {
+
             
         }
         public DbSet<Admin> Admin { get; set; }
@@ -22,6 +23,7 @@ namespace KurumsalWebProjesi.Models.DataContext
         public DbSet<Kimlik> Kimlik { get; set; }
         public DbSet<Slider> Slider{ get; set; }
         public DbSet<Yorum> Yorum{ get; set; }
+        public DbSet<Languages> Languages{ get; set; }
 
     }
 }

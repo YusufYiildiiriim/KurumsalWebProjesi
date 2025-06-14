@@ -6,7 +6,8 @@
 }
 
 <p>
-    @Html.ActionLink("Yeni Oluştur", "Create")
+    @*@Html.ActionLink("Yeni Oluştur", "Create")*@
+    <a class="btn btn-dark" href="/Kimlik/Create">Yeni Ekle</a>
 </p>
 <h1>Site Kimlik Sayfası</h1>
 <p></p>
@@ -27,6 +28,10 @@
         <th>
             @Html.DisplayNameFor(model => model.Unvan)
         </th>
+        <th>
+            Kimlik Dili
+        </th>
+
         <th></th>
     </tr>
 
@@ -43,14 +48,18 @@
                 @Html.Raw(item.Description)
             </td>
             <td>
-                <img class="image-responsive" src="~/@item.LogoURL"  width="300" height="200" alt="Alternate Text" />
+                <img class="image-responsive" src="~/@item.LogoURL" width="300" height="200" alt="Alternate Text" />
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Unvan)
             </td>
             <td>
+                @Html.DisplayFor(modelItem => item.Languages.Language)
+            </td>
+            <td>
                 @Html.ActionLink("Güncelle", "Edit", new { id = item.KimlikId })
             </td>
+            <td><a href="/Kimlik/Delete/@item.KimlikId">Sil</a> </td>
         </tr>
     }
 

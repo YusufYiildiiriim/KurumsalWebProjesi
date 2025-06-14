@@ -17,7 +17,10 @@ namespace KurumsalWebProjesi.Models.Model
         public Kategori kategori{ get; set; }
 
         public ICollection<Yorum> Yorums { get; set; }
-            
+        public int? LanguagesId { get; set; }
+
+        public Languages Languages { get; set; }
+
 
     }
 }
