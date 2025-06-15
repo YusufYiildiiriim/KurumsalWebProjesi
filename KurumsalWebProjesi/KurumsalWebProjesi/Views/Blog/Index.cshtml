@@ -8,23 +8,71 @@
 <script src="~/Scripts/DataTables/jquery.dataTables.js"></script>
 
 @*<script>
-    $(document).ready(function () {
-        $('#myTable').DataTable();
-        
-    });
+        $(document).ready(function () {
+            $('#myTable').DataTable();
 
-</script>*@
-<script>
-    $(document).ready(function () {
-        $('#myTable').DataTable({
-            language: {
-                url: '//cdn.datatables.net/plug-ins/1.13.6/i18n/tr.json'
-            }
         });
-    });
-</script>
+
+    </script>*@
+@*<script>
+        $(document).ready(function () {
+            $('#myTable').DataTable({
+                language: {
+                    url: '//cdn.datatables.net/plug-ins/1.13.6/i18n/tr.json'
+                }
+            });
+        });
+    </script>*@
+
+
+
+
+
+
+
+
+
+
 <h2>Blog Kayıtları</h2>
 <a class="btn btn-light" href="/Blog/Create">Yeni Blog Ekle</a>
+<br />
+<br />
+<br />
+
+<form method="get" class="row g-3 mb-4">
+    <div class="col-md-2">
+        <select name="dil" class="form-select">
+            <option value="">Dil Seç</option>
+            @foreach (var d in ViewBag.Diller as SelectList)
+            {
+                <option value="@d.Value" @(string.Equals(Request.QueryString["dil"], d.Value, StringComparison.OrdinalIgnoreCase) ? "selected" : "")>@d.Text</option>
+            }
+        </select>
+    </div>
+
+    <div class="col-md-2">
+        <select name="kategoriId" class="form-select">
+            <option value="">Kategori Seç</option>
+            @foreach (var k in ViewBag.Kategoriler as SelectList)
+            {
+                <option value="@k.Value" @(Request.QueryString["kategoriId"] == k.Value ? "selected" : "")>@k.Text</option>
+            }
+        </select>
+    </div>
+
+    <div class="col-md-2">
+        <input type="text" name="baslik" class="form-control" placeholder="Başlık ara" value="@Request.QueryString["baslik"]" />
+    </div>
+
+    <div class="col-md-2">
+        <input type="text" name="icerik" class="form-control" placeholder="İçerik ara" value="@Request.QueryString["icerik"]" />
+    </div>
+
+    <div class="col-md-2">
+        <button type="submit" class="btn btn-primary">Filtrele</button>
+        <a href="@Url.Action("Index")" class="btn btn-secondary">Temizle</a>
+    </div>
+</form>
 
 <table class="table table-striped" id="myTable">
     <thead>

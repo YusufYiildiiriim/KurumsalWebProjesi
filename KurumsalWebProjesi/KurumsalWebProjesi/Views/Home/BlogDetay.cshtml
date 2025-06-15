@@ -96,11 +96,11 @@
                     blogid: blogid
                 },
                 success: function (data) {
-                    alert(adsoyadi + " - Yorumunuz gönderildi. Kontrol edildikten sonra yayınlanacaktır.");
+                    alert(adsoyadi + "@(HttpContext.GetGlobalResourceObject("Labels", "BlogDetay_yorumBilgilendirme"))");
                     $("#yorumForm")[0].reset(); // Formu temizle
                 },
                 error: function () {
-                    alert("Yorum gönderilirken bir hata oluştu. Lütfen tekrar deneyin.");
+                    alert("@(HttpContext.GetGlobalResourceObject("Labels", "BlogDetay_yorumBilgilendirmehata"))");
                 }
             });
         });

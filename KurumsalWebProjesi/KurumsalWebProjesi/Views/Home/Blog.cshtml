@@ -7,21 +7,18 @@
 <!-- Page Title -->
 <div class="page-title dark-background">
     <div class="container position-relative">
-        @*<h1>Blog</h1>
-            <p>Blog Yazılarımıza Alt Sekmeden Ulaşabilirsiniz.</p>*@
-        <nav>
-            <!--<ul>-->
-                @*<li><a href="index.html">Ana Menü</a></li>
-                    <li class="current">Blog</li>*@
+        <form method="get" action="@Url.Action("Blog")" class="d-flex gap-2">
+            <input type="text" name="search" placeholder="@(HttpContext.GetGlobalResourceObject("Labels", "Blog_Filter_Basligagoreara"))" value="@Request.QueryString["search"]" class="form-control" />
 
-                <!--<li>-->
+            <select name="filter" class="form-select" onchange="this.form.submit()">
+                <option value=""> @(HttpContext.GetGlobalResourceObject("Labels", "Blog_Filter_TummYazilar"))</option>
+                <option value="yorumlu" @(Request.QueryString["filter"] == "yorumlu" ? "selected" : "")>@(HttpContext.GetGlobalResourceObject("Labels", "Blog_Filter_Yorumlu"))</option>
+                <option value="yorumsuz" @(Request.QueryString["filter"] == "yorumsuz" ? "selected" : "")>@(HttpContext.GetGlobalResourceObject("Labels", "Blog_Filter_Yorumsuz"))</option>
+            </select>
 
-                    @*<h5>Blog Kategorilerimiz</h5>
-                    @{
-                        Html.RenderAction("BlogKategoriPartial", "Home");
-                    }*@
-                <!--</li>
-            </ul>-->
+            <button type="submit" class="btn btn-primary">Ara</button>
+        </form>
+
         </nav>
     </div>
 </div><!-- End Page Title -->

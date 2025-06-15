@@ -54,12 +54,19 @@
                     <li><a href="/Iletisim">@(HttpContext.GetGlobalResourceObject("Labels", "Home_navmenu_Iletisim"))</a></li>
                     <li><a href="/Hizmetlerimiz">@(HttpContext.GetGlobalResourceObject("Labels", "Home_navmenu_Hizmetler"))</a></li>
                     <li>
+                        @{
+                            string currentLang = Request.QueryString["lang"]
+                                                 ?? Request.Cookies["lang"]?.Value
+                                                 ?? "tr";
+                        }
+
                         <form method="get" action="@Url.Action("Index", "Home")">
                             <select name="lang" onchange="this.form.submit()">
-                                <option value="tr" @(Request.QueryString["lang"] == "tr" ? "selected" : "")>Türkçe</option>
-                                <option value="en" @(Request.QueryString["lang"] == "en" ? "selected" : "")>English</option>
+                                <option value="tr" @(currentLang == "tr" ? "selected" : "")>Türkçe</option>
+                                <option value="en" @(currentLang == "en" ? "selected" : "")>English</option>
                             </select>
                         </form>
+
                     </li>
                 @*<li>
                     <div id="google_translate_element"></div>

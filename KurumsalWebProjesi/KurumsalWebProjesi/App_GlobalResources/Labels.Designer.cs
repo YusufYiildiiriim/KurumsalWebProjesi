@@ -97,6 +97,42 @@ namespace KurumsalWebProjesi.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Başlığa Göre Ara.
+        /// </summary>
+        internal static string Blog_Filter_Basligagoreara {
+            get {
+                return ResourceManager.GetString("Blog_Filter_Basligagoreara", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tüm Yazılar.
+        /// </summary>
+        internal static string Blog_Filter_TummYazilar {
+            get {
+                return ResourceManager.GetString("Blog_Filter_TummYazilar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Yorum Alan Yazılar.
+        /// </summary>
+        internal static string Blog_Filter_Yorumlu {
+            get {
+                return ResourceManager.GetString("Blog_Filter_Yorumlu", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Yorum Almayan Yazılar.
+        /// </summary>
+        internal static string Blog_Filter_Yorumsuz {
+            get {
+                return ResourceManager.GetString("Blog_Filter_Yorumsuz", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Yorumunuz.
         /// </summary>
         internal static string Blog_yorumunuz {
@@ -111,6 +147,24 @@ namespace KurumsalWebProjesi.App_GlobalResources {
         internal static string Blog_yorumyap {
             get {
                 return ResourceManager.GetString("Blog_yorumyap", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to  - Yorumunuz gönderildi. Kontrol edildikten sonra yayınlanacaktır..
+        /// </summary>
+        internal static string BlogDetay_yorumBilgilendirme {
+            get {
+                return ResourceManager.GetString("BlogDetay_yorumBilgilendirme", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Yorum gönderilirken bir hata oluştu. Lütfen tekrar deneyin.
+        /// </summary>
+        internal static string BlogDetay_yorumBilgilendirmehata {
+            get {
+                return ResourceManager.GetString("BlogDetay_yorumBilgilendirmehata", resourceCulture);
             }
         }
         

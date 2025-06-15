@@ -155,13 +155,13 @@ namespace KurumsalWebProjesi.Controllers
                 .OrderByDescending(x => x.HizmetId)
                 .ToList();
 
-            if (!hizmetler.Any())
-            {
-                hizmetler = db.Hizmet
-                    .Where(x => x.Languages.LanguageCode == "tr")
-                    .OrderByDescending(x => x.HizmetId)
-                    .ToList();
-            }
+            //if (!hizmetler.Any())
+            //{
+            //    hizmetler = db.Hizmet
+            //        .Where(x => x.Languages.LanguageCode == "tr")
+            //        .OrderByDescending(x => x.HizmetId)
+            //        .ToList();
+            //}
 
             return View(hizmetler);
         }
@@ -215,29 +215,69 @@ namespace KurumsalWebProjesi.Controllers
         //    //Include("Kategori").
         //}
         [Route("BlogPost")]
-        public ActionResult Blog()
+
+        //Filtrelemeli action
+        public ActionResult Blog(string filter, string search)
         {
             string lang = GetLang();
 
             ViewBag.kimlik = db.Kimlik
-                .FirstOrDefault(x => x.Languages.LanguageCode == lang)
-                ?? db.Kimlik.FirstOrDefault(x => x.Languages.LanguageCode == "tr");
+                .FirstOrDefault(x => x.Languages.LanguageCode == lang);
 
             var bloglar = db.Blog
+                .Include("Kategori")
+                .Include("Yorums")
                 .Where(x => x.Languages.LanguageCode == lang)
                 .OrderByDescending(x => x.BlogId)
                 .ToList();
 
-            if (!bloglar.Any())
+            // 🔍 Sadece başlık araması
+            if (!string.IsNullOrEmpty(search))
             {
-                bloglar = db.Blog
-                    .Where(x => x.Languages.LanguageCode == "tr")
-                    .OrderByDescending(x => x.BlogId)
+                string lowerSearch = search.ToLower();
+                bloglar = bloglar
+                    .Where(x => x.Baslik.ToLower().Contains(lowerSearch))
                     .ToList();
+            }
+
+            // 💬 Yorumlu/Yorumsuz filtreleme
+            switch (filter)
+            {
+                case "yorumlu":
+                    bloglar = bloglar.Where(x => x.Yorums.Any()).ToList();
+                    break;
+                case "yorumsuz":
+                    bloglar = bloglar.Where(x => !x.Yorums.Any()).ToList();
+                    break;
             }
 
             return View(bloglar);
         }
+
+        //filtrelemesiz action
+        //public ActionResult Blog()
+        //{
+        //    string lang = GetLang();
+
+        //    ViewBag.kimlik = db.Kimlik
+        //        .FirstOrDefault(x => x.Languages.LanguageCode == lang)
+        //        ?? db.Kimlik.FirstOrDefault(x => x.Languages.LanguageCode == "tr");
+
+        //    var bloglar = db.Blog
+        //        .Where(x => x.Languages.LanguageCode == lang)
+        //        .OrderByDescending(x => x.BlogId)
+        //        .ToList();
+
+        //    if (!bloglar.Any())
+        //    {
+        //        bloglar = db.Blog
+        //            .Where(x => x.Languages.LanguageCode == "tr")
+        //            .OrderByDescending(x => x.BlogId)
+        //            .ToList();
+        //    }
+
+        //    return View(bloglar);
+        //}
 
         //[Route("BlogPost/{Kategoriad}/{id:int}")]
         //public ActionResult KategoriBlog(int id)

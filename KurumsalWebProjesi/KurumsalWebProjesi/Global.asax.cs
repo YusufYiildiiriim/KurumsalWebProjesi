@@ -21,23 +21,21 @@ namespace KurumsalWebProjesi
         {
             string lang = HttpContext.Current.Request.QueryString["lang"];
 
-            // Eğer URL'de yoksa cookie'den oku
-            if (string.IsNullOrEmpty(lang))
+            // 1. URL'de dil varsa -> Cookie'ye yaz
+            if (!string.IsNullOrEmpty(lang))
             {
-                HttpCookie langCookie = HttpContext.Current.Request.Cookies["lang"];
-                if (langCookie != null)
-                    lang = langCookie.Value;
-                else
-                    lang = "tr"; // default
-            }
-            else
-            {
-                // URL'de varsa cookie'yi güncelle (opsiyonel)
                 HttpCookie langCookie = new HttpCookie("lang", lang);
                 langCookie.Expires = DateTime.Now.AddYears(1);
                 HttpContext.Current.Response.Cookies.Add(langCookie);
             }
+            else
+            {
+                // 2. Cookie'den al
+                HttpCookie langCookie = HttpContext.Current.Request.Cookies["lang"];
+                lang = langCookie != null ? langCookie.Value : "tr"; // default
+            }
 
+            // 3. Kültür ayarını yap
             try
             {
                 var culture = new System.Globalization.CultureInfo(lang);
@@ -50,6 +48,7 @@ namespace KurumsalWebProjesi
                 System.Threading.Thread.CurrentThread.CurrentCulture = defaultCulture;
                 System.Threading.Thread.CurrentThread.CurrentUICulture = defaultCulture;
             }
+
         }
 
 

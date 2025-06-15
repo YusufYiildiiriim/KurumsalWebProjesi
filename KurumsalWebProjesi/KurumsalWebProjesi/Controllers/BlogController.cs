@@ -13,17 +13,59 @@ namespace KurumsalWebProjesi.Controllers
     public class BlogController : Controller
     {
         private KurumsalDBContext db = new KurumsalDBContext();
-        // GET: Blog
-        
-        public ActionResult Index()
-        {
-            var a = db.Blog.Include("Kategori").Include("Languages").ToList();
-            var b = db.Blog.Include("Kategori").ToList();
+        //GET: Blog
 
+        //public ActionResult Index()
+        //{
+        //    var a = db.Blog.Include("Kategori").Include("Languages").ToList();
+        //    var b = db.Blog.Include("Kategori").ToList();
+
+        //    db.Configuration.LazyLoadingEnabled = false;
+        //    return View(a);
+        //}
+        public ActionResult Index(string dil, int? kategoriId, string baslik, string icerik)
+        {
             db.Configuration.LazyLoadingEnabled = false;
-            return View(a);
-            
+
+            var bloglar = db.Blog
+                .Include("Kategori")
+                .Include("Languages")
+                .AsQueryable();
+
+            // Dil filtresi
+            if (!string.IsNullOrEmpty(dil))
+            {
+                bloglar = bloglar.Where(b => b.Languages.LanguageCode == dil);
+            }
+
+            // Kategori filtresi
+            if (kategoriId.HasValue)
+            {
+                bloglar = bloglar.Where(b => b.kategori.KategoriId == kategoriId.Value);
+            }
+
+            // Başlık araması
+            if (!string.IsNullOrEmpty(baslik))
+            {
+                bloglar = bloglar.Where(b => b.Baslik.Contains(baslik));
+            }
+
+            // İçerik araması
+            if (!string.IsNullOrEmpty(icerik))
+            {
+                bloglar = bloglar.Where(b => b.Icerik.Contains(icerik));
+            }
+
+            ViewBag.Diller = new SelectList(db.Languages.ToList(), "LanguageCode", "Language");
+            ViewBag.Kategoriler = new SelectList(db.Kategori.ToList(), "KategoriId", "KategoriAd");
+
+            return View(bloglar.ToList());
         }
+
+
+
+
+
         public ActionResult Create()
         {
             ViewBag.KategoriId = new SelectList(db.Kategori, "KategoriId","KategoriAd");
