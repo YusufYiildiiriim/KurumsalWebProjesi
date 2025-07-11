@@ -21,7 +21,7 @@ namespace KurumsalWebProjesi
         {
             string lang = HttpContext.Current.Request.QueryString["lang"];
 
-            // 1. URL'de dil varsa -> Cookie'ye yaz
+    
             if (!string.IsNullOrEmpty(lang))
             {
                 HttpCookie langCookie = new HttpCookie("lang", lang);
@@ -30,12 +30,12 @@ namespace KurumsalWebProjesi
             }
             else
             {
-                // 2. Cookie'den al
+               
                 HttpCookie langCookie = HttpContext.Current.Request.Cookies["lang"];
                 lang = langCookie != null ? langCookie.Value : "tr"; // default
             }
 
-            // 3. Kültür ayarını yap
+          
             try
             {
                 var culture = new System.Globalization.CultureInfo(lang);

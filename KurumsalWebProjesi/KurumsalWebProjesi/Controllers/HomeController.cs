@@ -24,18 +24,11 @@ namespace KurumsalWebProjesi.Controllers
         [HttpPost]
         public ActionResult DilSec(string dil)
         {
-            // Örnek: gelen değer "türkçe"
-
-            // İstersen cookie olarak sakla:
+     
             HttpCookie cookie = new HttpCookie("lang", dil == "türkçe" ? "tr" : (dil == "english" ? "en" : "tr"));
             cookie.Expires = DateTime.Now.AddYears(1);
             Response.Cookies.Add(cookie);
 
-
-            // İstersen Session da kullanabilirsin (opsiyonel)
-            // Session["Dil"] = dil;
-
-            // Geri yönlendir
             return RedirectToAction("Index", "Home");
         }
 
@@ -231,7 +224,7 @@ namespace KurumsalWebProjesi.Controllers
                 .OrderByDescending(x => x.BlogId)
                 .ToList();
 
-            // 🔍 Sadece başlık araması
+          
             if (!string.IsNullOrEmpty(search))
             {
                 string lowerSearch = search.ToLower();
@@ -240,7 +233,7 @@ namespace KurumsalWebProjesi.Controllers
                     .ToList();
             }
 
-            // 💬 Yorumlu/Yorumsuz filtreleme
+         
             switch (filter)
             {
                 case "yorumlu":
