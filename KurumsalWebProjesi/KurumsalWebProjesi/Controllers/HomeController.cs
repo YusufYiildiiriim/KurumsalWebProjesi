@@ -40,6 +40,7 @@ namespace KurumsalWebProjesi.Controllers
         [Route("AnaSayfa")]
         public ActionResult Index()
         {
+            
             string lang = GetLang();
 
             ViewBag.kimlik = db.Kimlik
